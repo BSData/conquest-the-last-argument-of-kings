@@ -1,11 +1,11 @@
-Template Data Repo
+Conquest: The Last Argument of Kings
 ==================
 
-[![GitHub release](https://img.shields.io/github/release/BSData/TemplateDataRepo.svg?style=flat-square)](https://github.com/BSData/TemplateDataRepo/releases/latest)
-[![Github commits (since latest release)](https://img.shields.io/github/commits-since/BSData/TemplateDataRepo/latest.svg?style=flat-square)](https://github.com/BSData/TemplateDataRepo/releases)
-[![Open Bug issues](https://img.shields.io/github/issues/BSData/TemplateDataRepo/bug.svg?style=flat-square&label=bugs)](https://github.com/BSData/TemplateDataRepo/issues?q=is%3Aissue+is%3Aopen+label%3Abug)
-[![GitHub contributors](https://img.shields.io/github/contributors/BSData/TemplateDataRepo.svg?style=flat-square)](https://github.com/BSData/TemplateDataRepo/graphs/contributors)
-[![GitHub commit activity the past year](https://img.shields.io/github/commit-activity/y/BSData/TemplateDataRepo.svg?style=flat-square)](https://github.com/BSData/TemplateDataRepo/pulse/monthly)
+[![GitHub release](https://img.shields.io/github/release/BSData/conquest-the-last-argument-of-kings.svg?style=flat-square)](https://github.com/BSData/conquest-the-last-argument-of-kings/releases/latest)
+[![Github commits (since latest release)](https://img.shields.io/github/commits-since/BSData/conquest-the-last-argument-of-kings/latest.svg?style=flat-square)](https://github.com/BSData/conquest-the-last-argument-of-kings/releases)
+[![Open Bug issues](https://img.shields.io/github/issues/BSData/conquest-the-last-argument-of-kings/bug.svg?style=flat-square&label=bugs)](https://github.com/BSData/conquest-the-last-argument-of-kings/issues?q=is%3Aissue+is%3Aopen+label%3Abug)
+[![GitHub contributors](https://img.shields.io/github/contributors/BSData/conquest-the-last-argument-of-kings.svg?style=flat-square)](https://github.com/BSData/conquest-the-last-argument-of-kings/graphs/contributors)
+[![GitHub commit activity the past year](https://img.shields.io/github/commit-activity/y/BSData/conquest-the-last-argument-of-kings.svg?style=flat-square)](https://github.com/BSData/conquest-the-last-argument-of-kings/pulse/monthly)
 
 [![Chat on Discord](https://img.shields.io/discord/558412685981777922.svg?logo=discord&style=popout-square)](https://discord.gg/KqPVhds)
 
@@ -42,8 +42,8 @@ Great, thank you! Now, you have some options:
 * [BattleScribe Data on Appspot][]
 * [Getting Started wiki][]
 
-[Report it on Appspot]: http://battlescribedata.appspot.com/#/repo/TemplateDataRepo
-[Open Issue directly]: https://github.com/BSData/TemplateDataRepo/issues
+[Report it on Appspot]: http://battlescribedata.appspot.com/#/repo/conquest-the-last-argument-of-kings
+[Open Issue directly]: https://github.com/BSData/conquest-the-last-argument-of-kings/issues
 [BattleScribe homepage]: http://www.battlescribe.net/
 [BattleScribe Data on Appspot]: http://battlescribedata.appspot.com/#/repos
 [Getting Started wiki]: https://github.com/BSData/catalogue-development/wiki/Getting-Started#contributing
