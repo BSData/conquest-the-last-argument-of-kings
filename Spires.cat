@@ -781,8 +781,8 @@
             <characteristic name="A" typeId="aabd-64a7-3c18-962b">1</characteristic>
             <characteristic name="W" typeId="9c64-457b-c1a1-bc22">1</characteristic>
             <characteristic name="R" typeId="e147-6572-3b99-292f">2</characteristic>
-            <characteristic name="D" typeId="0081-5d0a-ceb0-a7e4">2</characteristic>
-            <characteristic name="E" typeId="2f78-3c11-e20c-e37d">1</characteristic>
+            <characteristic name="D" typeId="0081-5d0a-ceb0-a7e4">1</characteristic>
+            <characteristic name="E" typeId="2f78-3c11-e20c-e37d">0</characteristic>
             <characteristic name="Stands" typeId="2597-c728-f218-ef49">3</characteristic>
             <characteristic name="Models on Stand" typeId="83c4-3d35-165a-7fe8">4</characteristic>
           </characteristics>
@@ -956,12 +956,12 @@
             <characteristic name="Type" typeId="cba9-e7ef-c610-9f16">Infantry</characteristic>
             <characteristic name="Class" typeId="d3c8-8d28-c5f6-fb54">Medium</characteristic>
             <characteristic name="M" typeId="3f09-60f5-0e32-22c5">5</characteristic>
-            <characteristic name="V" typeId="e10c-ab55-bd93-1b4b">2</characteristic>
-            <characteristic name="C" typeId="5231-1d79-754f-035a">1</characteristic>
+            <characteristic name="V" typeId="e10c-ab55-bd93-1b4b">1</characteristic>
+            <characteristic name="C" typeId="5231-1d79-754f-035a">2</characteristic>
             <characteristic name="A" typeId="aabd-64a7-3c18-962b">1</characteristic>
             <characteristic name="W" typeId="9c64-457b-c1a1-bc22">1</characteristic>
             <characteristic name="R" typeId="e147-6572-3b99-292f">2</characteristic>
-            <characteristic name="D" typeId="0081-5d0a-ceb0-a7e4">1</characteristic>
+            <characteristic name="D" typeId="0081-5d0a-ceb0-a7e4">2</characteristic>
             <characteristic name="E" typeId="2f78-3c11-e20c-e37d">0</characteristic>
             <characteristic name="Stands" typeId="2597-c728-f218-ef49">3</characteristic>
             <characteristic name="Models on Stand" typeId="83c4-3d35-165a-7fe8">4</characteristic>
@@ -1141,13 +1141,6 @@
       </modifierGroups>
       <profiles>
         <profile id="3c5a-d6ef-be9c-5370" name="Avatara" hidden="false" typeId="3ac5-974b-5f8d-a72c" typeName="Regiment">
-          <modifiers>
-            <modifier type="increment" field="2597-c728-f218-ef49" value="1">
-              <repeats>
-                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="c4ce-252a-5f19-9bdb" repeats="1" roundUp="false"/>
-              </repeats>
-            </modifier>
-          </modifiers>
           <characteristics>
             <characteristic name="Type" typeId="cba9-e7ef-c610-9f16">Brute</characteristic>
             <characteristic name="Class" typeId="d3c8-8d28-c5f6-fb54">Medium</characteristic>
@@ -1563,9 +1556,9 @@
             <characteristic name="C" typeId="5231-1d79-754f-035a">3</characteristic>
             <characteristic name="A" typeId="aabd-64a7-3c18-962b">5</characteristic>
             <characteristic name="W" typeId="9c64-457b-c1a1-bc22">5</characteristic>
-            <characteristic name="R" typeId="e147-6572-3b99-292f">3</characteristic>
-            <characteristic name="D" typeId="0081-5d0a-ceb0-a7e4">2</characteristic>
-            <characteristic name="E" typeId="2f78-3c11-e20c-e37d">2</characteristic>
+            <characteristic name="R" typeId="e147-6572-3b99-292f">4</characteristic>
+            <characteristic name="D" typeId="0081-5d0a-ceb0-a7e4">4</characteristic>
+            <characteristic name="E" typeId="2f78-3c11-e20c-e37d">1</characteristic>
             <characteristic name="Stands" typeId="2597-c728-f218-ef49">3</characteristic>
             <characteristic name="Models on Stand" typeId="83c4-3d35-165a-7fe8">1</characteristic>
           </characteristics>
@@ -1687,7 +1680,7 @@
             <characteristic name="W" typeId="9c64-457b-c1a1-bc22">6</characteristic>
             <characteristic name="R" typeId="e147-6572-3b99-292f">3</characteristic>
             <characteristic name="D" typeId="0081-5d0a-ceb0-a7e4">4</characteristic>
-            <characteristic name="E" typeId="2f78-3c11-e20c-e37d">1</characteristic>
+            <characteristic name="E" typeId="2f78-3c11-e20c-e37d">0</characteristic>
             <characteristic name="Stands" typeId="2597-c728-f218-ef49">3</characteristic>
             <characteristic name="Models on Stand" typeId="83c4-3d35-165a-7fe8">1</characteristic>
           </characteristics>
@@ -2001,7 +1994,7 @@ your Command Stack. If their rules include such wording, ignore the rule.)</char
             <characteristic name="M" typeId="a927-edd0-12d9-0f7c">7</characteristic>
             <characteristic name="V" typeId="ec3d-89c2-5644-0663">2</characteristic>
             <characteristic name="C" typeId="0cfe-3a05-d4d8-07ff">3</characteristic>
-            <characteristic name="A" typeId="0a62-c83a-8685-5e39">7</characteristic>
+            <characteristic name="A" typeId="0a62-c83a-8685-5e39">4</characteristic>
             <characteristic name="W" typeId="5584-96c2-89c7-d797">6</characteristic>
             <characteristic name="R" typeId="3ec2-3399-4203-d655">5</characteristic>
             <characteristic name="D" typeId="4030-4ae9-6cfa-100d">4</characteristic>
