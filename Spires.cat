@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="7945-a0c4-c7cc-7377" name="Spires" revision="1" battleScribeVersion="2.03" library="false" gameSystemId="dd30-0080-e51a-c53f" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="7945-a0c4-c7cc-7377" name="Spires" revision="2" battleScribeVersion="2.03" library="false" gameSystemId="dd30-0080-e51a-c53f" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="af1e-f846-6f8d-7af8" name="Spires Army List"/>
   </publications>
@@ -3333,76 +3333,6 @@ of Mutations, instead of the one normally allowed. It pays full points for these
         </entryLink>
       </entryLinks>
     </selectionEntryGroup>
-    <selectionEntryGroup id="903b-1258-36c0-e140" name="Mastery of Flesh Retinue" hidden="false" collective="false" import="true">
-      <selectionEntries>
-        <selectionEntry id="d264-1db1-bb22-c08b" name="Tier 1" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="increment" field="92ff-18fb-e0e2-e189" value="1.0"/>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cc54-a58b-edd1-faf6" type="max"/>
-          </constraints>
-          <rules>
-            <rule id="9d0b-2408-0676-c7d8" name="Mastery of Flesh Tier 1" hidden="false">
-              <description>The Character may as an Action Choose a friendly Character within 12” and roll 1 die. On an 1-2 heal 2 wounds from that Character, otherwise heal 1 wound instead.</description>
-            </rule>
-          </rules>
-          <costs>
-            <cost name="Points" typeId="888d-4dac-90c1-beea" value="5.0"/>
-            <cost name="Retinue" typeId="92ff-18fb-e0e2-e189" value="0.0"/>
-            <cost name="Mastery" typeId="3af1-4791-0a97-8053" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="c0e8-9f9c-91df-2d6d" name="Tier 2" hidden="true" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="false">
-              <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="d264-1db1-bb22-c08b" type="equalTo"/>
-              </conditions>
-            </modifier>
-            <modifier type="increment" field="92ff-18fb-e0e2-e189" value="1.0"/>
-            <modifier type="add" field="category" value="2ee3-fb8c-f837-c22c"/>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a52a-b08a-fc7d-019d" type="max"/>
-          </constraints>
-          <rules>
-            <rule id="e51d-b90c-6b2e-8a40" name="Mastery of Flesh Tier 2" hidden="false">
-              <description>The Character gains Resist Decay (+1).</description>
-            </rule>
-          </rules>
-          <costs>
-            <cost name="Points" typeId="888d-4dac-90c1-beea" value="20.0"/>
-            <cost name="Retinue" typeId="92ff-18fb-e0e2-e189" value="0.0"/>
-            <cost name="Mastery" typeId="3af1-4791-0a97-8053" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="2408-5859-6132-0878" name="Tier 3" hidden="true" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="false">
-              <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="c0e8-9f9c-91df-2d6d" type="equalTo"/>
-              </conditions>
-            </modifier>
-            <modifier type="increment" field="92ff-18fb-e0e2-e189" value="1.0"/>
-            <modifier type="add" field="category" value="2ee3-fb8c-f837-c22c"/>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f5e9-0653-bcf8-fc92" type="max"/>
-          </constraints>
-          <rules>
-            <rule id="280a-f284-773b-fb23" name="Mastery of Flesh Tier 3" hidden="false">
-              <description>May take an Additional Pheromancy/Biomancy. The Character may activate an additional Draw Event per turn.</description>
-            </rule>
-          </rules>
-          <costs>
-            <cost name="Points" typeId="888d-4dac-90c1-beea" value="30.0"/>
-            <cost name="Retinue" typeId="92ff-18fb-e0e2-e189" value="0.0"/>
-            <cost name="Mastery" typeId="3af1-4791-0a97-8053" value="0.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
-    </selectionEntryGroup>
     <selectionEntryGroup id="5dfc-f743-b37d-5b30" name="Mutations (Long Lineage)" hidden="true" collective="false" import="true">
       <constraints>
         <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8722-4118-c7d9-27c4" type="max"/>
@@ -3717,9 +3647,6 @@ of Mutations, instead of the one normally allowed. It pays full points for these
         <selectionEntryGroup id="4dd0-eeaf-bad7-3e4f" name="Mastery of Flesh Retinue" hidden="false" collective="false" import="true">
           <selectionEntries>
             <selectionEntry id="8661-48cd-0db5-6d1e" name="Tier 1" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="increment" field="92ff-18fb-e0e2-e189" value="1.0"/>
-              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="50ad-70f2-448c-c845" type="max"/>
               </constraints>
@@ -3741,7 +3668,6 @@ of Mutations, instead of the one normally allowed. It pays full points for these
                     <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8661-48cd-0db5-6d1e" type="equalTo"/>
                   </conditions>
                 </modifier>
-                <modifier type="increment" field="92ff-18fb-e0e2-e189" value="1.0"/>
                 <modifier type="add" field="category" value="2ee3-fb8c-f837-c22c"/>
               </modifiers>
               <constraints>
@@ -3765,7 +3691,6 @@ of Mutations, instead of the one normally allowed. It pays full points for these
                     <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="d54c-8417-5fcb-8cf8" type="equalTo"/>
                   </conditions>
                 </modifier>
-                <modifier type="increment" field="92ff-18fb-e0e2-e189" value="1.0"/>
                 <modifier type="add" field="category" value="2ee3-fb8c-f837-c22c"/>
               </modifiers>
               <constraints>
