@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="7945-a0c4-c7cc-7377" name="Spires" revision="3" battleScribeVersion="2.03" library="false" gameSystemId="dd30-0080-e51a-c53f" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="7945-a0c4-c7cc-7377" name="Spires" revision="3" battleScribeVersion="2.03" library="false" gameSystemId="dd30-0080-e51a-c53f" gameSystemRevision="4" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="af1e-f846-6f8d-7af8" name="Spires Army List"/>
   </publications>
@@ -1823,37 +1823,15 @@
       <modifiers>
         <modifier type="set" field="hidden" value="false">
           <conditions>
-            <condition field="selections" scope="5953-df28-3b4e-ae06" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="42e7-8903-a155-1cb6" type="equalTo"/>
+            <condition field="selections" scope="5953-df28-3b4e-ae06" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" childId="5e23-6ac0-b426-3173" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set-primary" field="category" value="ad96-d57a-9fbd-90b7">
+          <conditions>
+            <condition field="selections" scope="5953-df28-3b4e-ae06" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5e23-6ac0-b426-3173" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
-      <modifierGroups>
-        <modifierGroup>
-          <comment>Adds Restricted or Mainstay based on Character Regiment selection list</comment>
-          <modifiers>
-            <modifier type="set-primary" field="category" value="ad96-d57a-9fbd-90b7">
-              <conditions>
-                <condition field="selections" scope="5953-df28-3b4e-ae06" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5e23-6ac0-b426-3173" type="atLeast"/>
-              </conditions>
-            </modifier>
-            <modifier type="set-primary" field="category" value="ad96-d57a-9fbd-90b7">
-              <conditions>
-                <condition field="selections" scope="5953-df28-3b4e-ae06" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="42e7-8903-a155-1cb6" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </modifierGroup>
-        <modifierGroup>
-          <comment>Sets Hidden false if Regiment selectable by Character</comment>
-          <modifiers>
-            <modifier type="set" field="hidden" value="false">
-              <conditions>
-                <condition field="selections" scope="5953-df28-3b4e-ae06" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5e23-6ac0-b426-3173" type="atLeast"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </modifierGroup>
-      </modifierGroups>
       <profiles>
         <profile id="4e47-ff11-cab7-f5c8" name="Siegebreaker Behemoth" hidden="false" typeId="3ac5-974b-5f8d-a72c" typeName="Regiment">
           <characteristics>
@@ -2297,6 +2275,1201 @@ of Mutations, instead of the one normally allowed. It pays full points for these
       </entryLinks>
       <costs>
         <cost name="Points" typeId="888d-4dac-90c1-beea" value="80.0"/>
+        <cost name="Retinue" typeId="92ff-18fb-e0e2-e189" value="0.0"/>
+        <cost name="Mastery" typeId="3af1-4791-0a97-8053" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="982f-9ea6-0e40-9e1d" name="Abomination (Eccentric)" hidden="true" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="5953-df28-3b4e-ae06" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="42e7-8903-a155-1cb6" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <profiles>
+        <profile id="9256-fe12-bcfe-39ae" name="Abomination" hidden="false" typeId="3ac5-974b-5f8d-a72c" typeName="Regiment">
+          <characteristics>
+            <characteristic name="Type" typeId="cba9-e7ef-c610-9f16">Monster</characteristic>
+            <characteristic name="Class" typeId="d3c8-8d28-c5f6-fb54">Heavy</characteristic>
+            <characteristic name="M" typeId="3f09-60f5-0e32-22c5">10</characteristic>
+            <characteristic name="V" typeId="e10c-ab55-bd93-1b4b">1</characteristic>
+            <characteristic name="C" typeId="5231-1d79-754f-035a">2</characteristic>
+            <characteristic name="A" typeId="aabd-64a7-3c18-962b">10</characteristic>
+            <characteristic name="W" typeId="9c64-457b-c1a1-bc22">10</characteristic>
+            <characteristic name="R" typeId="e147-6572-3b99-292f">4</characteristic>
+            <characteristic name="D" typeId="0081-5d0a-ceb0-a7e4">3</characteristic>
+            <characteristic name="E" typeId="2f78-3c11-e20c-e37d">0</characteristic>
+            <characteristic name="Stands" typeId="2597-c728-f218-ef49">1</characteristic>
+            <characteristic name="Models on Stand" typeId="83c4-3d35-165a-7fe8">1</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="87ff-987e-fd4c-4922" name="Cleave" hidden="false" targetId="c1b8-7404-b20b-ebe5" type="rule">
+          <modifiers>
+            <modifier type="append" field="name" value=" 1"/>
+          </modifiers>
+        </infoLink>
+        <infoLink id="e215-fdab-b0b5-c88b" name="Flurry" hidden="false" targetId="68aa-6fdd-10d5-1009" type="rule"/>
+        <infoLink id="249d-008a-a7ca-1c36" name="Terrifying" hidden="false" targetId="4b6f-b10c-ae68-bdbc" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="8d99-520b-f177-7321" name="Regiment" hidden="false" targetId="32a9-788d-2727-b320" primary="true"/>
+        <categoryLink id="04cb-6f20-ed82-8e1b" name="Abomination" hidden="false" targetId="f0a3-931d-702b-9c64" primary="false"/>
+        <categoryLink id="3f85-74a3-af49-14bf" name="Restricted (Eccentric)" hidden="false" targetId="d97f-110c-2396-892f" primary="false"/>
+      </categoryLinks>
+      <costs>
+        <cost name="Points" typeId="888d-4dac-90c1-beea" value="145.0"/>
+        <cost name="Retinue" typeId="92ff-18fb-e0e2-e189" value="0.0"/>
+        <cost name="Mastery" typeId="3af1-4791-0a97-8053" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="2109-061e-6b2e-1b74" name="Avatara (Eccentric)" hidden="true" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="5953-df28-3b4e-ae06" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="42e7-8903-a155-1cb6" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <profiles>
+        <profile id="2ff9-c02f-d644-a5ec" name="Avatara" hidden="false" typeId="3ac5-974b-5f8d-a72c" typeName="Regiment">
+          <characteristics>
+            <characteristic name="Type" typeId="cba9-e7ef-c610-9f16">Brute</characteristic>
+            <characteristic name="Class" typeId="d3c8-8d28-c5f6-fb54">Medium</characteristic>
+            <characteristic name="M" typeId="3f09-60f5-0e32-22c5">7</characteristic>
+            <characteristic name="V" typeId="e10c-ab55-bd93-1b4b">2</characteristic>
+            <characteristic name="C" typeId="5231-1d79-754f-035a">2</characteristic>
+            <characteristic name="A" typeId="aabd-64a7-3c18-962b">4</characteristic>
+            <characteristic name="W" typeId="9c64-457b-c1a1-bc22">4</characteristic>
+            <characteristic name="R" typeId="e147-6572-3b99-292f">4</characteristic>
+            <characteristic name="D" typeId="0081-5d0a-ceb0-a7e4">4</characteristic>
+            <characteristic name="E" typeId="2f78-3c11-e20c-e37d">2</characteristic>
+            <characteristic name="Stands" typeId="2597-c728-f218-ef49">3</characteristic>
+            <characteristic name="Models on Stand" typeId="83c4-3d35-165a-7fe8">1</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="4f35-7a24-61fe-bbe2" name="Cleave" hidden="false" targetId="c1b8-7404-b20b-ebe5" type="rule">
+          <modifiers>
+            <modifier type="append" field="name" value=" 1"/>
+          </modifiers>
+        </infoLink>
+        <infoLink id="226f-a732-69ed-e382" name="Resist Decay" hidden="false" targetId="9de5-4030-290d-5337" type="rule">
+          <modifiers>
+            <modifier type="append" field="name" value=" 1"/>
+          </modifiers>
+        </infoLink>
+        <infoLink id="494a-194a-b47e-8a51" name="Support" hidden="false" targetId="baa3-8e26-445d-189a" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="4730-6c97-f15a-af9f" name="New CategoryLink" hidden="false" targetId="32a9-788d-2727-b320" primary="true"/>
+        <categoryLink id="c182-287c-af3f-cb43" name="Avatara" hidden="false" targetId="9835-dc6e-44ef-23da" primary="false"/>
+        <categoryLink id="526d-087b-7ca1-768a" name="Spires" hidden="false" targetId="fdbd-afe7-066c-4fb9" primary="false"/>
+        <categoryLink id="6f2d-aaac-aa35-865a" name="Restricted (Eccentric)" hidden="false" targetId="d97f-110c-2396-892f" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="cdbe-791b-827b-c712" name="Unit Upgrades" hidden="false" collective="false" import="true" targetId="c022-c1ba-442c-3249" type="selectionEntryGroup">
+          <entryLinks>
+            <entryLink id="386f-a296-cf5c-e806" name="Additonal Stands" hidden="false" collective="false" import="true" targetId="15af-31f9-039c-8f9a" type="selectionEntry">
+              <costs>
+                <cost name="Points" typeId="888d-4dac-90c1-beea" value="55.0"/>
+              </costs>
+            </entryLink>
+            <entryLink id="2c80-0082-2b55-d2f2" name="Leader" hidden="false" collective="false" import="true" targetId="8568-7db2-4d81-9e8e" type="selectionEntry">
+              <costs>
+                <cost name="Points" typeId="888d-4dac-90c1-beea" value="20.0"/>
+              </costs>
+            </entryLink>
+            <entryLink id="651a-07f8-3a43-2134" name="Standard Bearer" hidden="false" collective="false" import="true" targetId="dea1-3fab-2a17-301d" type="selectionEntry">
+              <costs>
+                <cost name="Points" typeId="888d-4dac-90c1-beea" value="20.0"/>
+              </costs>
+            </entryLink>
+          </entryLinks>
+        </entryLink>
+      </entryLinks>
+      <costs>
+        <cost name="Points" typeId="888d-4dac-90c1-beea" value="165.0"/>
+        <cost name="Retinue" typeId="92ff-18fb-e0e2-e189" value="0.0"/>
+        <cost name="Mastery" typeId="3af1-4791-0a97-8053" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="129d-8c0f-a5b3-c117" name="Bound Clones (Eccentric)" hidden="true" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="5953-df28-3b4e-ae06" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="42e7-8903-a155-1cb6" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <profiles>
+        <profile id="123d-9b1a-803a-3d17" name="Bound Clones" hidden="false" typeId="3ac5-974b-5f8d-a72c" typeName="Regiment">
+          <characteristics>
+            <characteristic name="Type" typeId="cba9-e7ef-c610-9f16">Infantry</characteristic>
+            <characteristic name="Class" typeId="d3c8-8d28-c5f6-fb54">Medium</characteristic>
+            <characteristic name="M" typeId="3f09-60f5-0e32-22c5">5</characteristic>
+            <characteristic name="V" typeId="e10c-ab55-bd93-1b4b">1</characteristic>
+            <characteristic name="C" typeId="5231-1d79-754f-035a">2</characteristic>
+            <characteristic name="A" typeId="aabd-64a7-3c18-962b">1</characteristic>
+            <characteristic name="W" typeId="9c64-457b-c1a1-bc22">1</characteristic>
+            <characteristic name="R" typeId="e147-6572-3b99-292f">2</characteristic>
+            <characteristic name="D" typeId="0081-5d0a-ceb0-a7e4">2</characteristic>
+            <characteristic name="E" typeId="2f78-3c11-e20c-e37d">1</characteristic>
+            <characteristic name="Stands" typeId="2597-c728-f218-ef49">3</characteristic>
+            <characteristic name="Models on Stand" typeId="83c4-3d35-165a-7fe8">4</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="c6f0-09a2-7174-e9d9" name="Support" hidden="false" targetId="baa3-8e26-445d-189a" type="rule"/>
+        <infoLink id="4e91-f638-25f2-661a" name="Shield" hidden="false" targetId="e4a5-8d43-95ab-f2cc" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="7f1e-c21a-13e4-1ee2" name="Regiment" hidden="false" targetId="32a9-788d-2727-b320" primary="true"/>
+        <categoryLink id="da60-9d4e-f7a6-1695" name="Bound Clones" hidden="false" targetId="1557-eba0-557e-4f38" primary="false"/>
+        <categoryLink id="430b-6730-8480-ef55" name="Restricted (Eccentric)" hidden="false" targetId="d97f-110c-2396-892f" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="ca22-84f9-e4b1-bbff" name="Unit Upgrades" hidden="false" collective="false" import="true" targetId="c022-c1ba-442c-3249" type="selectionEntryGroup">
+          <selectionEntryGroups>
+            <selectionEntryGroup id="10cd-8f05-3685-8096" name="Select ONE:" hidden="false" collective="false" import="true">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="81db-6a63-8367-3833" type="max"/>
+              </constraints>
+              <entryLinks>
+                <entryLink id="2784-de46-4768-5977" name="Ward Preceptor" hidden="false" collective="false" import="true" targetId="e0d4-95c1-0d8a-5102" type="selectionEntry">
+                  <costs>
+                    <cost name="Points" typeId="888d-4dac-90c1-beea" value="45.0"/>
+                  </costs>
+                </entryLink>
+                <entryLink id="d77b-c7ee-ca93-827d" name="Catabolic Node" hidden="false" collective="false" import="true" targetId="e857-bb2d-10b2-437c" type="selectionEntry">
+                  <costs>
+                    <cost name="Points" typeId="888d-4dac-90c1-beea" value="25.0"/>
+                  </costs>
+                </entryLink>
+                <entryLink id="83c4-0d8a-a81c-5267" name="Assault Preceptor" hidden="false" collective="false" import="true" targetId="d24f-2381-de17-1e27" type="selectionEntry">
+                  <costs>
+                    <cost name="Points" typeId="888d-4dac-90c1-beea" value="15.0"/>
+                  </costs>
+                </entryLink>
+              </entryLinks>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+          <entryLinks>
+            <entryLink id="f6da-57e1-d7f7-ab15" name="Leader" hidden="false" collective="false" import="true" targetId="8568-7db2-4d81-9e8e" type="selectionEntry">
+              <costs>
+                <cost name="Points" typeId="888d-4dac-90c1-beea" value="10.0"/>
+              </costs>
+            </entryLink>
+            <entryLink id="0ff3-3c2c-96bf-d039" name="Standard Bearer" hidden="false" collective="false" import="true" targetId="dea1-3fab-2a17-301d" type="selectionEntry">
+              <costs>
+                <cost name="Points" typeId="888d-4dac-90c1-beea" value="15.0"/>
+              </costs>
+            </entryLink>
+            <entryLink id="6d08-1dda-8b5d-f716" name="Additonal Stands" hidden="false" collective="false" import="true" targetId="15af-31f9-039c-8f9a" type="selectionEntry">
+              <costs>
+                <cost name="Points" typeId="888d-4dac-90c1-beea" value="35.0"/>
+              </costs>
+            </entryLink>
+          </entryLinks>
+        </entryLink>
+      </entryLinks>
+      <costs>
+        <cost name="Points" typeId="888d-4dac-90c1-beea" value="165.0"/>
+        <cost name="Retinue" typeId="92ff-18fb-e0e2-e189" value="0.0"/>
+        <cost name="Mastery" typeId="3af1-4791-0a97-8053" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="f6b3-46fa-afff-81c9" name="Brute Drones (Eccentric)" hidden="true" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="5953-df28-3b4e-ae06" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="42e7-8903-a155-1cb6" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <profiles>
+        <profile id="b8b4-16eb-26c9-afdc" name="Brute Drones" hidden="false" typeId="3ac5-974b-5f8d-a72c" typeName="Regiment">
+          <characteristics>
+            <characteristic name="Type" typeId="cba9-e7ef-c610-9f16">Brute</characteristic>
+            <characteristic name="Class" typeId="d3c8-8d28-c5f6-fb54">Medium</characteristic>
+            <characteristic name="M" typeId="3f09-60f5-0e32-22c5">6</characteristic>
+            <characteristic name="V" typeId="e10c-ab55-bd93-1b4b">1</characteristic>
+            <characteristic name="C" typeId="5231-1d79-754f-035a">2</characteristic>
+            <characteristic name="A" typeId="aabd-64a7-3c18-962b">5</characteristic>
+            <characteristic name="W" typeId="9c64-457b-c1a1-bc22">4</characteristic>
+            <characteristic name="R" typeId="e147-6572-3b99-292f">4</characteristic>
+            <characteristic name="D" typeId="0081-5d0a-ceb0-a7e4">3</characteristic>
+            <characteristic name="E" typeId="2f78-3c11-e20c-e37d">0</characteristic>
+            <characteristic name="Stands" typeId="2597-c728-f218-ef49">3</characteristic>
+            <characteristic name="Models on Stand" typeId="83c4-3d35-165a-7fe8">1</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="9b26-1f05-dea1-fc14" name="Flurry" hidden="false" targetId="68aa-6fdd-10d5-1009" type="rule"/>
+        <infoLink id="3078-97b3-2c19-2a76" name="Unstoppable" hidden="false" targetId="1a3b-4e99-4034-bff7" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="0101-3721-08b7-efc7" name="New CategoryLink" hidden="false" targetId="32a9-788d-2727-b320" primary="true"/>
+        <categoryLink id="3034-e809-7805-9135" name="Brute Drones" hidden="false" targetId="faf8-773f-19bf-7406" primary="false"/>
+        <categoryLink id="918f-296c-b73e-0eb2" name="Restricted (Eccentric)" hidden="false" targetId="d97f-110c-2396-892f" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="b9f4-061a-8740-29b4" name="Unit Upgrades" hidden="false" collective="false" import="true" targetId="c022-c1ba-442c-3249" type="selectionEntryGroup">
+          <entryLinks>
+            <entryLink id="7a37-cb98-fa28-9912" name="Additonal Stands" hidden="false" collective="false" import="true" targetId="15af-31f9-039c-8f9a" type="selectionEntry">
+              <costs>
+                <cost name="Points" typeId="888d-4dac-90c1-beea" value="60.0"/>
+              </costs>
+            </entryLink>
+          </entryLinks>
+        </entryLink>
+      </entryLinks>
+      <costs>
+        <cost name="Points" typeId="888d-4dac-90c1-beea" value="180.0"/>
+        <cost name="Retinue" typeId="92ff-18fb-e0e2-e189" value="0.0"/>
+        <cost name="Mastery" typeId="3af1-4791-0a97-8053" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="db10-9d60-7a37-92da" name="Centaur Avatara (Eccentric)" hidden="true" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="5953-df28-3b4e-ae06" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="42e7-8903-a155-1cb6" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <profiles>
+        <profile id="7d6d-cec0-2208-9b8b" name="Centaur Avatara" hidden="false" typeId="3ac5-974b-5f8d-a72c" typeName="Regiment">
+          <characteristics>
+            <characteristic name="Type" typeId="cba9-e7ef-c610-9f16">Cavalry</characteristic>
+            <characteristic name="Class" typeId="d3c8-8d28-c5f6-fb54">Heavy</characteristic>
+            <characteristic name="M" typeId="3f09-60f5-0e32-22c5">8</characteristic>
+            <characteristic name="V" typeId="e10c-ab55-bd93-1b4b">2</characteristic>
+            <characteristic name="C" typeId="5231-1d79-754f-035a">3</characteristic>
+            <characteristic name="A" typeId="aabd-64a7-3c18-962b">5</characteristic>
+            <characteristic name="W" typeId="9c64-457b-c1a1-bc22">5</characteristic>
+            <characteristic name="R" typeId="e147-6572-3b99-292f">4</characteristic>
+            <characteristic name="D" typeId="0081-5d0a-ceb0-a7e4">4</characteristic>
+            <characteristic name="E" typeId="2f78-3c11-e20c-e37d">1</characteristic>
+            <characteristic name="Stands" typeId="2597-c728-f218-ef49">3</characteristic>
+            <characteristic name="Models on Stand" typeId="83c4-3d35-165a-7fe8">1</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="9783-8911-3fbd-ce20" name="Brutal Impact" hidden="false" targetId="3175-30fd-4d95-57a3" type="rule">
+          <modifiers>
+            <modifier type="append" field="name" value=" 2"/>
+          </modifiers>
+        </infoLink>
+        <infoLink id="fd41-6b18-4427-643e" name="Resist Decay" hidden="false" targetId="9de5-4030-290d-5337" type="rule">
+          <modifiers>
+            <modifier type="append" field="name" value=" 1"/>
+          </modifiers>
+        </infoLink>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="bbd0-94dc-cc5e-6543" name="New CategoryLink" hidden="false" targetId="32a9-788d-2727-b320" primary="true"/>
+        <categoryLink id="0c97-853c-2e42-dd95" name="Centaur Avatara" hidden="false" targetId="7352-795e-f049-3d25" primary="false"/>
+        <categoryLink id="3dbc-1f30-5291-d797" name="Restricted (Eccentric)" hidden="false" targetId="d97f-110c-2396-892f" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="d7cf-fa85-b809-2d0b" name="Unit Upgrades" hidden="false" collective="false" import="true" targetId="c022-c1ba-442c-3249" type="selectionEntryGroup">
+          <selectionEntryGroups>
+            <selectionEntryGroup id="7d5d-ed78-1668-8a2d" name="Select ONE:" hidden="false" collective="false" import="true">
+              <entryLinks>
+                <entryLink id="9e11-724b-e5ae-cdf8" name="Assault Preceptor" hidden="false" collective="false" import="true" targetId="d24f-2381-de17-1e27" type="selectionEntry">
+                  <costs>
+                    <cost name="Points" typeId="888d-4dac-90c1-beea" value="20.0"/>
+                  </costs>
+                </entryLink>
+                <entryLink id="e255-741e-06fd-11bf" name="Ward Preceptor" hidden="false" collective="false" import="true" targetId="e0d4-95c1-0d8a-5102" type="selectionEntry">
+                  <costs>
+                    <cost name="Points" typeId="888d-4dac-90c1-beea" value="20.0"/>
+                  </costs>
+                </entryLink>
+              </entryLinks>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+          <entryLinks>
+            <entryLink id="7f76-b88a-c59e-0bd4" name="Additonal Stands" hidden="false" collective="false" import="true" targetId="15af-31f9-039c-8f9a" type="selectionEntry">
+              <costs>
+                <cost name="Points" typeId="888d-4dac-90c1-beea" value="55.0"/>
+              </costs>
+            </entryLink>
+            <entryLink id="8516-b18a-67e9-69b8" name="Standard Bearer" hidden="false" collective="false" import="true" targetId="dea1-3fab-2a17-301d" type="selectionEntry">
+              <costs>
+                <cost name="Points" typeId="888d-4dac-90c1-beea" value="20.0"/>
+              </costs>
+            </entryLink>
+            <entryLink id="d1ff-5f58-54fd-7bfa" name="Leader" hidden="false" collective="false" import="true" targetId="8568-7db2-4d81-9e8e" type="selectionEntry">
+              <costs>
+                <cost name="Points" typeId="888d-4dac-90c1-beea" value="10.0"/>
+              </costs>
+            </entryLink>
+          </entryLinks>
+        </entryLink>
+      </entryLinks>
+      <costs>
+        <cost name="Points" typeId="888d-4dac-90c1-beea" value="165.0"/>
+        <cost name="Retinue" typeId="92ff-18fb-e0e2-e189" value="0.0"/>
+        <cost name="Mastery" typeId="3af1-4791-0a97-8053" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="3e6d-d922-4b6d-4ac9" name="Desolation Beast (Eccentric)" hidden="true" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="5953-df28-3b4e-ae06" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="42e7-8903-a155-1cb6" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <profiles>
+        <profile id="e23c-2dea-270e-d740" name="Desolation Beast" hidden="false" typeId="3ac5-974b-5f8d-a72c" typeName="Regiment">
+          <characteristics>
+            <characteristic name="Type" typeId="cba9-e7ef-c610-9f16">Monster</characteristic>
+            <characteristic name="Class" typeId="d3c8-8d28-c5f6-fb54">Heavy</characteristic>
+            <characteristic name="M" typeId="3f09-60f5-0e32-22c5">7</characteristic>
+            <characteristic name="V" typeId="e10c-ab55-bd93-1b4b">2</characteristic>
+            <characteristic name="C" typeId="5231-1d79-754f-035a">1</characteristic>
+            <characteristic name="A" typeId="aabd-64a7-3c18-962b">4</characteristic>
+            <characteristic name="W" typeId="9c64-457b-c1a1-bc22">10</characteristic>
+            <characteristic name="R" typeId="e147-6572-3b99-292f">3</characteristic>
+            <characteristic name="D" typeId="0081-5d0a-ceb0-a7e4">2</characteristic>
+            <characteristic name="E" typeId="2f78-3c11-e20c-e37d">0</characteristic>
+            <characteristic name="Stands" typeId="2597-c728-f218-ef49">1</characteristic>
+            <characteristic name="Models on Stand" typeId="83c4-3d35-165a-7fe8">1</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="f397-cddb-b362-b612" name="Aura of Death" hidden="false" targetId="9b85-3dfc-da79-0d25" type="rule"/>
+        <infoLink id="26e0-e306-f711-f9b7" name="Lethal Demise" hidden="false" targetId="9849-5c99-5d4d-c7f6" type="rule"/>
+        <infoLink id="9702-3609-19f0-45c0" name="Terrifying" hidden="false" targetId="4b6f-b10c-ae68-bdbc" type="rule"/>
+        <infoLink id="6e48-eae0-7bf1-efcf" name="Barrage" hidden="false" targetId="d441-87ba-5bc8-ac66" type="rule">
+          <modifiers>
+            <modifier type="append" field="name" value=" 12 (12&quot;)"/>
+          </modifiers>
+        </infoLink>
+        <infoLink id="ef86-7b8e-26eb-e63b" name="Deadly Shot" hidden="false" targetId="e6bd-c8dd-dfd5-8ec4" type="rule"/>
+        <infoLink id="4619-7c01-791f-2584" name="Torrential Fire" hidden="false" targetId="51ca-4076-686f-ec06" type="rule"/>
+        <infoLink id="1550-7ca8-a16d-5e3b" name="Armour Piercing" hidden="false" targetId="e4a0-87c2-e969-a2e4" type="rule">
+          <modifiers>
+            <modifier type="append" field="name" value=" 1"/>
+          </modifiers>
+        </infoLink>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="0d2e-9a42-5231-e99d" name="New CategoryLink" hidden="false" targetId="32a9-788d-2727-b320" primary="true"/>
+        <categoryLink id="87e3-30ed-5b57-bd59" name="Desolation Beast" hidden="false" targetId="c8d7-2ddf-9671-d4bd" primary="false"/>
+        <categoryLink id="e032-b98c-cec8-a47d" name="Restricted (Eccentric)" hidden="false" targetId="d97f-110c-2396-892f" primary="false"/>
+      </categoryLinks>
+      <costs>
+        <cost name="Points" typeId="888d-4dac-90c1-beea" value="130.0"/>
+        <cost name="Retinue" typeId="92ff-18fb-e0e2-e189" value="0.0"/>
+        <cost name="Mastery" typeId="3af1-4791-0a97-8053" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="187b-b1de-b932-fc2c" name="Desolation Drones (Eccentric)" hidden="true" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="5953-df28-3b4e-ae06" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="42e7-8903-a155-1cb6" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <profiles>
+        <profile id="fcef-ad3b-0ad8-6200" name="Desolation Drones" hidden="false" typeId="3ac5-974b-5f8d-a72c" typeName="Regiment">
+          <characteristics>
+            <characteristic name="Type" typeId="cba9-e7ef-c610-9f16">Infantry</characteristic>
+            <characteristic name="Class" typeId="d3c8-8d28-c5f6-fb54">Medium</characteristic>
+            <characteristic name="M" typeId="3f09-60f5-0e32-22c5">5</characteristic>
+            <characteristic name="V" typeId="e10c-ab55-bd93-1b4b">2</characteristic>
+            <characteristic name="C" typeId="5231-1d79-754f-035a">1</characteristic>
+            <characteristic name="A" typeId="aabd-64a7-3c18-962b">1</characteristic>
+            <characteristic name="W" typeId="9c64-457b-c1a1-bc22">1</characteristic>
+            <characteristic name="R" typeId="e147-6572-3b99-292f">2</characteristic>
+            <characteristic name="D" typeId="0081-5d0a-ceb0-a7e4">1</characteristic>
+            <characteristic name="E" typeId="2f78-3c11-e20c-e37d">0</characteristic>
+            <characteristic name="Stands" typeId="2597-c728-f218-ef49">3</characteristic>
+            <characteristic name="Models on Stand" typeId="83c4-3d35-165a-7fe8">4</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="13b6-d822-69c3-ccd8" name="Lethal Demise" hidden="false" targetId="9849-5c99-5d4d-c7f6" type="rule"/>
+        <infoLink id="8bea-c0ac-c421-c8d6" name="Barrage" hidden="false" targetId="d441-87ba-5bc8-ac66" type="rule">
+          <modifiers>
+            <modifier type="append" field="name" value=" 1 (20&quot;)"/>
+          </modifiers>
+        </infoLink>
+        <infoLink id="4eca-4259-456b-6293" name="Armour Piercing" hidden="false" targetId="e4a0-87c2-e969-a2e4" type="rule">
+          <modifiers>
+            <modifier type="append" field="name" value=" 1"/>
+          </modifiers>
+        </infoLink>
+        <infoLink id="a699-dbd9-0bdb-c0ec" name="Deadly Shot" hidden="false" targetId="e6bd-c8dd-dfd5-8ec4" type="rule"/>
+        <infoLink id="f972-2edf-8fbe-a3d1" name="Torrential Fire" hidden="false" targetId="51ca-4076-686f-ec06" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="6300-12e3-4910-f15e" name="Desolation Drones" hidden="false" targetId="590c-f342-5c04-82da" primary="false"/>
+        <categoryLink id="668f-4f83-7b33-db67" name="Regiment" hidden="false" targetId="32a9-788d-2727-b320" primary="true"/>
+        <categoryLink id="4073-b387-3344-8db3" name="Restricted (Eccentric)" hidden="false" targetId="d97f-110c-2396-892f" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="f771-d22e-b3a0-d637" name="Unit Upgrades" hidden="false" collective="false" import="true" targetId="c022-c1ba-442c-3249" type="selectionEntryGroup">
+          <entryLinks>
+            <entryLink id="5106-bfad-b1da-e395" name="Additonal Stands" hidden="false" collective="false" import="true" targetId="15af-31f9-039c-8f9a" type="selectionEntry">
+              <costs>
+                <cost name="Points" typeId="888d-4dac-90c1-beea" value="55.0"/>
+              </costs>
+            </entryLink>
+            <entryLink id="ed98-4cb7-ba6c-7ba9" name="Standard Bearer" hidden="false" collective="false" import="true" targetId="dea1-3fab-2a17-301d" type="selectionEntry">
+              <costs>
+                <cost name="Points" typeId="888d-4dac-90c1-beea" value="10.0"/>
+              </costs>
+            </entryLink>
+            <entryLink id="c430-b3e0-0745-55f0" name="Leader" hidden="false" collective="false" import="true" targetId="8568-7db2-4d81-9e8e" type="selectionEntry">
+              <costs>
+                <cost name="Points" typeId="888d-4dac-90c1-beea" value="10.0"/>
+              </costs>
+            </entryLink>
+          </entryLinks>
+        </entryLink>
+      </entryLinks>
+      <costs>
+        <cost name="Points" typeId="888d-4dac-90c1-beea" value="180.0"/>
+        <cost name="Retinue" typeId="92ff-18fb-e0e2-e189" value="0.0"/>
+        <cost name="Mastery" typeId="3af1-4791-0a97-8053" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="7dd2-c261-42c5-480c" name="Force-Grown Drone (Eccentric)" hidden="true" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="5953-df28-3b4e-ae06" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="42e7-8903-a155-1cb6" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <profiles>
+        <profile id="ba48-5b92-0b4f-7c28" name="Force-Grown Drone" hidden="false" typeId="3ac5-974b-5f8d-a72c" typeName="Regiment">
+          <characteristics>
+            <characteristic name="Type" typeId="cba9-e7ef-c610-9f16">Infantry</characteristic>
+            <characteristic name="Class" typeId="d3c8-8d28-c5f6-fb54">Light</characteristic>
+            <characteristic name="M" typeId="3f09-60f5-0e32-22c5">5</characteristic>
+            <characteristic name="V" typeId="e10c-ab55-bd93-1b4b">1</characteristic>
+            <characteristic name="C" typeId="5231-1d79-754f-035a">1</characteristic>
+            <characteristic name="A" typeId="aabd-64a7-3c18-962b">1</characteristic>
+            <characteristic name="W" typeId="9c64-457b-c1a1-bc22">1</characteristic>
+            <characteristic name="R" typeId="e147-6572-3b99-292f">1</characteristic>
+            <characteristic name="D" typeId="0081-5d0a-ceb0-a7e4">1</characteristic>
+            <characteristic name="E" typeId="2f78-3c11-e20c-e37d">0</characteristic>
+            <characteristic name="Stands" typeId="2597-c728-f218-ef49">3</characteristic>
+            <characteristic name="Models on Stand" typeId="83c4-3d35-165a-7fe8">4</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="b826-7bbf-10e5-161d" name="Shield" hidden="false" targetId="e4a5-8d43-95ab-f2cc" type="rule"/>
+        <infoLink id="bb45-e17d-c7a4-82ea" name="Support" hidden="false" targetId="baa3-8e26-445d-189a" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="9ca3-c028-1f69-ba75" name="Force-Grown Drones" hidden="false" targetId="027c-8dde-cb32-9eab" primary="false"/>
+        <categoryLink id="c715-11d2-8c1d-9d47" name="Regiment" hidden="false" targetId="32a9-788d-2727-b320" primary="true"/>
+        <categoryLink id="9dbf-77c0-4a2a-8251" name="Restricted (Eccentric)" hidden="false" targetId="d97f-110c-2396-892f" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="0912-1a14-aa18-d041" name="Unit Upgrades" hidden="false" collective="false" import="true" targetId="c022-c1ba-442c-3249" type="selectionEntryGroup">
+          <entryLinks>
+            <entryLink id="9e33-f0fb-5070-5c76" name="Catabolic Node" hidden="false" collective="false" import="true" targetId="e857-bb2d-10b2-437c" type="selectionEntry">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="6e28-f51d-366d-5297" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="Points" typeId="888d-4dac-90c1-beea" value="25.0"/>
+              </costs>
+            </entryLink>
+            <entryLink id="0bf2-78d6-dbb1-7cc7" name="Pheromonic Node" hidden="false" collective="false" import="true" targetId="7b44-1d8d-647b-a324" type="selectionEntry">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="92b0-001d-f2b9-1908" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="Points" typeId="888d-4dac-90c1-beea" value="25.0"/>
+              </costs>
+            </entryLink>
+            <entryLink id="2e12-c58d-94a5-ce25" name="Additonal Stands" hidden="false" collective="false" import="true" targetId="15af-31f9-039c-8f9a" type="selectionEntry">
+              <costs>
+                <cost name="Points" typeId="888d-4dac-90c1-beea" value="25.0"/>
+              </costs>
+            </entryLink>
+          </entryLinks>
+        </entryLink>
+      </entryLinks>
+      <costs>
+        <cost name="Points" typeId="888d-4dac-90c1-beea" value="80.0"/>
+        <cost name="Retinue" typeId="92ff-18fb-e0e2-e189" value="0.0"/>
+        <cost name="Mastery" typeId="3af1-4791-0a97-8053" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="475e-c53f-5ac9-c745" name="Incarnate Sentinels (Eccentric)" hidden="true" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="5953-df28-3b4e-ae06" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="42e7-8903-a155-1cb6" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <profiles>
+        <profile id="d56e-3680-97f5-ab84" name="Incarnate Sentinels" hidden="false" typeId="3ac5-974b-5f8d-a72c" typeName="Regiment">
+          <characteristics>
+            <characteristic name="Type" typeId="cba9-e7ef-c610-9f16">Brute</characteristic>
+            <characteristic name="Class" typeId="d3c8-8d28-c5f6-fb54">Heavy</characteristic>
+            <characteristic name="M" typeId="3f09-60f5-0e32-22c5">7</characteristic>
+            <characteristic name="V" typeId="e10c-ab55-bd93-1b4b">1</characteristic>
+            <characteristic name="C" typeId="5231-1d79-754f-035a">2</characteristic>
+            <characteristic name="A" typeId="aabd-64a7-3c18-962b">4</characteristic>
+            <characteristic name="W" typeId="9c64-457b-c1a1-bc22">6</characteristic>
+            <characteristic name="R" typeId="e147-6572-3b99-292f">3</characteristic>
+            <characteristic name="D" typeId="0081-5d0a-ceb0-a7e4">4</characteristic>
+            <characteristic name="E" typeId="2f78-3c11-e20c-e37d">0</characteristic>
+            <characteristic name="Stands" typeId="2597-c728-f218-ef49">3</characteristic>
+            <characteristic name="Models on Stand" typeId="83c4-3d35-165a-7fe8">1</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="d23b-9908-2f62-20ee" name="Cleave" hidden="false" targetId="c1b8-7404-b20b-ebe5" type="rule">
+          <modifiers>
+            <modifier type="append" field="name" value=" 2"/>
+          </modifiers>
+        </infoLink>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="03cf-6ae4-73b3-aa0b" name="New CategoryLink" hidden="false" targetId="32a9-788d-2727-b320" primary="true"/>
+        <categoryLink id="04da-58a5-740f-fbea" name="Incarnate Sentinels" hidden="false" targetId="d0e7-2a03-d6b1-b52e" primary="false"/>
+        <categoryLink id="4b0c-c2eb-8c6e-3346" name="Restricted (Eccentric)" hidden="false" targetId="d97f-110c-2396-892f" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="3b47-8cfa-b1c0-c5e3" name="Unit Upgrades" hidden="false" collective="false" import="true" targetId="c022-c1ba-442c-3249" type="selectionEntryGroup">
+          <entryLinks>
+            <entryLink id="64d4-6efd-5502-3ce6" name="Additonal Stands" hidden="false" collective="false" import="true" targetId="15af-31f9-039c-8f9a" type="selectionEntry">
+              <costs>
+                <cost name="Points" typeId="888d-4dac-90c1-beea" value="65.0"/>
+              </costs>
+            </entryLink>
+            <entryLink id="cb91-121c-2d09-57f1" name="Leader" hidden="false" collective="false" import="true" targetId="8568-7db2-4d81-9e8e" type="selectionEntry">
+              <costs>
+                <cost name="Points" typeId="888d-4dac-90c1-beea" value="10.0"/>
+              </costs>
+            </entryLink>
+          </entryLinks>
+        </entryLink>
+      </entryLinks>
+      <costs>
+        <cost name="Points" typeId="888d-4dac-90c1-beea" value="195.0"/>
+        <cost name="Retinue" typeId="92ff-18fb-e0e2-e189" value="0.0"/>
+        <cost name="Mastery" typeId="3af1-4791-0a97-8053" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="8a28-3f6a-8d0f-62c2" name="Leonine Avatara (Eccentric)" hidden="true" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="5953-df28-3b4e-ae06" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="42e7-8903-a155-1cb6" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <profiles>
+        <profile id="8a58-f0f2-07ac-8cee" name="Leonine Avatara" hidden="false" typeId="3ac5-974b-5f8d-a72c" typeName="Regiment">
+          <characteristics>
+            <characteristic name="Type" typeId="cba9-e7ef-c610-9f16">Brute</characteristic>
+            <characteristic name="Class" typeId="d3c8-8d28-c5f6-fb54">Medium</characteristic>
+            <characteristic name="M" typeId="3f09-60f5-0e32-22c5">10</characteristic>
+            <characteristic name="V" typeId="e10c-ab55-bd93-1b4b">3</characteristic>
+            <characteristic name="C" typeId="5231-1d79-754f-035a">2</characteristic>
+            <characteristic name="A" typeId="aabd-64a7-3c18-962b">4</characteristic>
+            <characteristic name="W" typeId="9c64-457b-c1a1-bc22">4</characteristic>
+            <characteristic name="R" typeId="e147-6572-3b99-292f">4</characteristic>
+            <characteristic name="D" typeId="0081-5d0a-ceb0-a7e4">2</characteristic>
+            <characteristic name="E" typeId="2f78-3c11-e20c-e37d">3</characteristic>
+            <characteristic name="Stands" typeId="2597-c728-f218-ef49">3</characteristic>
+            <characteristic name="Models on Stand" typeId="83c4-3d35-165a-7fe8">1</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="db87-6401-21f8-2721" name="Armour Piercing" hidden="false" targetId="e4a0-87c2-e969-a2e4" type="rule">
+          <modifiers>
+            <modifier type="append" field="name" value=" 2"/>
+          </modifiers>
+        </infoLink>
+        <infoLink id="6b6c-528e-fa77-eb97" name="Barrage" hidden="false" targetId="d441-87ba-5bc8-ac66" type="rule">
+          <modifiers>
+            <modifier type="append" field="name" value=" 1 (20&quot;)"/>
+          </modifiers>
+        </infoLink>
+        <infoLink id="1cb0-24cf-139e-a365" name="Fluid Formation" hidden="false" targetId="24b4-65d7-2928-17ea" type="rule"/>
+        <infoLink id="3e44-ee4d-a04e-b4fb" name="Resist Decay" hidden="false" targetId="9de5-4030-290d-5337" type="rule">
+          <modifiers>
+            <modifier type="append" field="name" value=" 1"/>
+          </modifiers>
+        </infoLink>
+        <infoLink id="d751-2c8d-e8c8-3aa9" name="Deadly Shot" hidden="false" targetId="e6bd-c8dd-dfd5-8ec4" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="6e4d-93a4-5279-8f09" name="New CategoryLink" hidden="false" targetId="32a9-788d-2727-b320" primary="true"/>
+        <categoryLink id="8323-c688-da85-42b0" name="Leonine Avatara" hidden="false" targetId="b070-46be-7448-ee94" primary="false"/>
+        <categoryLink id="adb1-d124-da30-fe45" name="Restricted (Eccentric)" hidden="false" targetId="d97f-110c-2396-892f" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="03eb-e053-24d3-f6f1" name="Unit Upgrades" hidden="false" collective="false" import="true" targetId="c022-c1ba-442c-3249" type="selectionEntryGroup">
+          <entryLinks>
+            <entryLink id="762e-e0dd-bd7c-06c6" name="Additonal Stands" hidden="false" collective="false" import="true" targetId="15af-31f9-039c-8f9a" type="selectionEntry">
+              <costs>
+                <cost name="Points" typeId="888d-4dac-90c1-beea" value="60.0"/>
+              </costs>
+            </entryLink>
+            <entryLink id="4c2f-c494-9369-6e05" name="Leader" hidden="false" collective="false" import="true" targetId="8568-7db2-4d81-9e8e" type="selectionEntry">
+              <costs>
+                <cost name="Points" typeId="888d-4dac-90c1-beea" value="10.0"/>
+              </costs>
+            </entryLink>
+            <entryLink id="1267-a543-ae8d-48fa" name="Standard Bearer" hidden="false" collective="false" import="true" targetId="dea1-3fab-2a17-301d" type="selectionEntry">
+              <costs>
+                <cost name="Points" typeId="888d-4dac-90c1-beea" value="10.0"/>
+              </costs>
+            </entryLink>
+          </entryLinks>
+        </entryLink>
+      </entryLinks>
+      <costs>
+        <cost name="Points" typeId="888d-4dac-90c1-beea" value="180.0"/>
+        <cost name="Retinue" typeId="92ff-18fb-e0e2-e189" value="0.0"/>
+        <cost name="Mastery" typeId="3af1-4791-0a97-8053" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="7d9f-4244-7d02-3116" name="Marksman Clones (Eccentric)" hidden="true" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="5953-df28-3b4e-ae06" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="42e7-8903-a155-1cb6" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <profiles>
+        <profile id="5a24-b9f0-f6a6-d74a" name="Marksman Clones" hidden="false" typeId="3ac5-974b-5f8d-a72c" typeName="Regiment">
+          <characteristics>
+            <characteristic name="Type" typeId="cba9-e7ef-c610-9f16">Infantry</characteristic>
+            <characteristic name="Class" typeId="d3c8-8d28-c5f6-fb54">Medium</characteristic>
+            <characteristic name="M" typeId="3f09-60f5-0e32-22c5">5</characteristic>
+            <characteristic name="V" typeId="e10c-ab55-bd93-1b4b">2</characteristic>
+            <characteristic name="C" typeId="5231-1d79-754f-035a">1</characteristic>
+            <characteristic name="A" typeId="aabd-64a7-3c18-962b">1</characteristic>
+            <characteristic name="W" typeId="9c64-457b-c1a1-bc22">1</characteristic>
+            <characteristic name="R" typeId="e147-6572-3b99-292f">2</characteristic>
+            <characteristic name="D" typeId="0081-5d0a-ceb0-a7e4">1</characteristic>
+            <characteristic name="E" typeId="2f78-3c11-e20c-e37d">0</characteristic>
+            <characteristic name="Stands" typeId="2597-c728-f218-ef49">3</characteristic>
+            <characteristic name="Models on Stand" typeId="83c4-3d35-165a-7fe8">4</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="6896-c71a-1892-8f82" name="Barrage" hidden="false" targetId="d441-87ba-5bc8-ac66" type="rule">
+          <modifiers>
+            <modifier type="append" field="name" value="2 (28&quot;)"/>
+          </modifiers>
+        </infoLink>
+        <infoLink id="1107-2367-8fb4-239c" name="Arcing Fire" hidden="false" targetId="d692-c6ee-70d3-2747" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="c21f-9d6d-ada1-a47b" name="New CategoryLink" hidden="false" targetId="32a9-788d-2727-b320" primary="true"/>
+        <categoryLink id="d35d-4f39-3305-0e9b" name="Marksman Clones" hidden="false" targetId="aad2-833d-e043-1adb" primary="false"/>
+        <categoryLink id="e049-321f-fa22-4a36" name="Spires" hidden="false" targetId="fdbd-afe7-066c-4fb9" primary="false"/>
+        <categoryLink id="fbc9-35a9-68b4-d992" name="Restricted (Eccentric)" hidden="false" targetId="d97f-110c-2396-892f" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="1a29-06fd-df89-3ed2" name="Unit Upgrades" hidden="false" collective="false" import="true" targetId="c022-c1ba-442c-3249" type="selectionEntryGroup">
+          <entryLinks>
+            <entryLink id="cf57-59a7-5a3c-9bf8" name="Additonal Stands" hidden="false" collective="false" import="true" targetId="15af-31f9-039c-8f9a" type="selectionEntry">
+              <costs>
+                <cost name="Points" typeId="888d-4dac-90c1-beea" value="55.0"/>
+              </costs>
+            </entryLink>
+            <entryLink id="f639-ea0d-54cf-6ea3" name="Leader" hidden="false" collective="false" import="true" targetId="8568-7db2-4d81-9e8e" type="selectionEntry">
+              <costs>
+                <cost name="Points" typeId="888d-4dac-90c1-beea" value="5.0"/>
+              </costs>
+            </entryLink>
+            <entryLink id="7f53-5157-f90b-4148" name="Standard Bearer" hidden="false" collective="false" import="true" targetId="dea1-3fab-2a17-301d" type="selectionEntry">
+              <costs>
+                <cost name="Points" typeId="888d-4dac-90c1-beea" value="5.0"/>
+              </costs>
+            </entryLink>
+          </entryLinks>
+        </entryLink>
+      </entryLinks>
+      <costs>
+        <cost name="Points" typeId="888d-4dac-90c1-beea" value="165.0"/>
+        <cost name="Retinue" typeId="92ff-18fb-e0e2-e189" value="0.0"/>
+        <cost name="Mastery" typeId="3af1-4791-0a97-8053" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="690b-93d5-15a2-14ef" name="Onslaught Drones (Eccentric)" hidden="true" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="5953-df28-3b4e-ae06" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="42e7-8903-a155-1cb6" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <profiles>
+        <profile id="69e0-f551-8b56-09b8" name="Onslaught Drones" hidden="false" typeId="3ac5-974b-5f8d-a72c" typeName="Regiment">
+          <characteristics>
+            <characteristic name="Type" typeId="cba9-e7ef-c610-9f16">Infantry</characteristic>
+            <characteristic name="Class" typeId="d3c8-8d28-c5f6-fb54">Medium</characteristic>
+            <characteristic name="M" typeId="3f09-60f5-0e32-22c5">5</characteristic>
+            <characteristic name="V" typeId="e10c-ab55-bd93-1b4b">1</characteristic>
+            <characteristic name="C" typeId="5231-1d79-754f-035a">2</characteristic>
+            <characteristic name="A" typeId="aabd-64a7-3c18-962b">1</characteristic>
+            <characteristic name="W" typeId="9c64-457b-c1a1-bc22">1</characteristic>
+            <characteristic name="R" typeId="e147-6572-3b99-292f">2</characteristic>
+            <characteristic name="D" typeId="0081-5d0a-ceb0-a7e4">2</characteristic>
+            <characteristic name="E" typeId="2f78-3c11-e20c-e37d">0</characteristic>
+            <characteristic name="Stands" typeId="2597-c728-f218-ef49">3</characteristic>
+            <characteristic name="Models on Stand" typeId="83c4-3d35-165a-7fe8">4</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="a66c-c3b8-23a0-ad8b" name="Flurry" hidden="false" targetId="68aa-6fdd-10d5-1009" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="784b-86d2-57c0-15ff" name="New CategoryLink" hidden="false" targetId="32a9-788d-2727-b320" primary="true"/>
+        <categoryLink id="35fc-b2db-cb41-afe0" name="Onslaught Drones" hidden="false" targetId="36cb-b714-ce15-66ac" primary="false"/>
+        <categoryLink id="2249-69bb-99f6-e860" name="Spires" hidden="false" targetId="fdbd-afe7-066c-4fb9" primary="false"/>
+        <categoryLink id="7623-5bab-fbc3-8742" name="Restricted (Eccentric)" hidden="false" targetId="d97f-110c-2396-892f" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="e01c-4355-860d-f349" name="Unit Upgrades" hidden="false" collective="false" import="true" targetId="c022-c1ba-442c-3249" type="selectionEntryGroup">
+          <selectionEntryGroups>
+            <selectionEntryGroup id="b5d7-7383-a0d7-3b97" name="Select ONE:" hidden="false" collective="false" import="true">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="8ddf-dba2-2f15-da0c" type="max"/>
+              </constraints>
+              <entryLinks>
+                <entryLink id="7920-c102-619f-6cc7" name="Catabolic Node" hidden="false" collective="false" import="true" targetId="e857-bb2d-10b2-437c" type="selectionEntry">
+                  <costs>
+                    <cost name="Points" typeId="888d-4dac-90c1-beea" value="20.0"/>
+                  </costs>
+                </entryLink>
+              </entryLinks>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+          <entryLinks>
+            <entryLink id="c808-904c-83d6-1d09" name="Additonal Stands" hidden="false" collective="false" import="true" targetId="15af-31f9-039c-8f9a" type="selectionEntry">
+              <costs>
+                <cost name="Points" typeId="888d-4dac-90c1-beea" value="35.0"/>
+              </costs>
+            </entryLink>
+            <entryLink id="df7a-8bb5-9c90-9a20" name="Pheromonic Node" hidden="false" collective="false" import="true" targetId="7b44-1d8d-647b-a324" type="selectionEntry">
+              <costs>
+                <cost name="Points" typeId="888d-4dac-90c1-beea" value="30.0"/>
+              </costs>
+            </entryLink>
+          </entryLinks>
+        </entryLink>
+      </entryLinks>
+      <costs>
+        <cost name="Points" typeId="888d-4dac-90c1-beea" value="105.0"/>
+        <cost name="Retinue" typeId="92ff-18fb-e0e2-e189" value="0.0"/>
+        <cost name="Mastery" typeId="3af1-4791-0a97-8053" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="4d33-b524-3224-7b7d" name="Prowlers (Eccentric)" hidden="true" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="5953-df28-3b4e-ae06" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="42e7-8903-a155-1cb6" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <profiles>
+        <profile id="5ac1-2269-19a6-553f" name="Prowlers" hidden="false" typeId="3ac5-974b-5f8d-a72c" typeName="Regiment">
+          <characteristics>
+            <characteristic name="Type" typeId="cba9-e7ef-c610-9f16">Cavalry</characteristic>
+            <characteristic name="Class" typeId="d3c8-8d28-c5f6-fb54">Light</characteristic>
+            <characteristic name="M" typeId="3f09-60f5-0e32-22c5">12</characteristic>
+            <characteristic name="V" typeId="e10c-ab55-bd93-1b4b">2</characteristic>
+            <characteristic name="C" typeId="5231-1d79-754f-035a">2</characteristic>
+            <characteristic name="A" typeId="aabd-64a7-3c18-962b">6</characteristic>
+            <characteristic name="W" typeId="9c64-457b-c1a1-bc22">3</characteristic>
+            <characteristic name="R" typeId="e147-6572-3b99-292f">2</characteristic>
+            <characteristic name="D" typeId="0081-5d0a-ceb0-a7e4">0</characteristic>
+            <characteristic name="E" typeId="2f78-3c11-e20c-e37d">2</characteristic>
+            <characteristic name="Stands" typeId="2597-c728-f218-ef49">3</characteristic>
+            <characteristic name="Models on Stand" typeId="83c4-3d35-165a-7fe8">1</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="4bac-0e8f-81c6-e364" name="Fluid Formation" hidden="false" targetId="24b4-65d7-2928-17ea" type="rule"/>
+        <infoLink id="6aab-fc7e-f643-ed75" name="Feral" hidden="false" targetId="6794-ad88-f856-d9dc" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="2798-a2b2-fed7-e069" name="Prowlers" hidden="false" targetId="e05f-30d2-5d1d-6659" primary="false"/>
+        <categoryLink id="6be8-da1c-76f3-e379" name="Regiment" hidden="false" targetId="32a9-788d-2727-b320" primary="true"/>
+        <categoryLink id="5a6d-9984-682a-406b" name="Spires" hidden="false" targetId="fdbd-afe7-066c-4fb9" primary="false"/>
+        <categoryLink id="5e3b-ba3d-5210-5f9e" name="Restricted (Eccentric)" hidden="false" targetId="d97f-110c-2396-892f" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="511e-071b-52ab-0d43" name="Unit Upgrades" hidden="false" collective="false" import="true" targetId="c022-c1ba-442c-3249" type="selectionEntryGroup">
+          <entryLinks>
+            <entryLink id="e4e1-b218-8b28-e603" name="Additonal Stands" hidden="false" collective="false" import="true" targetId="15af-31f9-039c-8f9a" type="selectionEntry">
+              <costs>
+                <cost name="Points" typeId="888d-4dac-90c1-beea" value="55.0"/>
+              </costs>
+            </entryLink>
+          </entryLinks>
+        </entryLink>
+      </entryLinks>
+      <costs>
+        <cost name="Points" typeId="888d-4dac-90c1-beea" value="165.0"/>
+        <cost name="Retinue" typeId="92ff-18fb-e0e2-e189" value="0.0"/>
+        <cost name="Mastery" typeId="3af1-4791-0a97-8053" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="e00a-216d-f71f-4df5" name="Pteraphons (Eccentric)" hidden="true" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="5953-df28-3b4e-ae06" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="42e7-8903-a155-1cb6" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <profiles>
+        <profile id="00cc-92a3-a4fb-b28c" name="Pteraphons" hidden="false" typeId="3ac5-974b-5f8d-a72c" typeName="Regiment">
+          <characteristics>
+            <characteristic name="Type" typeId="cba9-e7ef-c610-9f16">Brute</characteristic>
+            <characteristic name="Class" typeId="d3c8-8d28-c5f6-fb54">Medium</characteristic>
+            <characteristic name="M" typeId="3f09-60f5-0e32-22c5">10</characteristic>
+            <characteristic name="V" typeId="e10c-ab55-bd93-1b4b">2</characteristic>
+            <characteristic name="C" typeId="5231-1d79-754f-035a">2</characteristic>
+            <characteristic name="A" typeId="aabd-64a7-3c18-962b">4</characteristic>
+            <characteristic name="W" typeId="9c64-457b-c1a1-bc22">4</characteristic>
+            <characteristic name="R" typeId="e147-6572-3b99-292f">3</characteristic>
+            <characteristic name="D" typeId="0081-5d0a-ceb0-a7e4">2</characteristic>
+            <characteristic name="E" typeId="2f78-3c11-e20c-e37d">2</characteristic>
+            <characteristic name="Stands" typeId="2597-c728-f218-ef49">3</characteristic>
+            <characteristic name="Models on Stand" typeId="83c4-3d35-165a-7fe8">1</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="4568-374b-d81c-8b2b" name="Cleave" hidden="false" targetId="c1b8-7404-b20b-ebe5" type="rule">
+          <modifiers>
+            <modifier type="append" field="name" value=" 1"/>
+          </modifiers>
+        </infoLink>
+        <infoLink id="3ca4-9fff-56f8-4aa9" name="Fluid Formation" hidden="false" targetId="24b4-65d7-2928-17ea" type="rule"/>
+        <infoLink id="d26b-ac83-75fb-b60b" name="Fly" hidden="false" targetId="2ce6-43c4-74a5-6c11" type="rule"/>
+        <infoLink id="ee94-18cf-3a9c-3942" name="Terrifying" hidden="false" targetId="4b6f-b10c-ae68-bdbc" type="rule"/>
+        <infoLink id="7ed4-1992-6999-53f0" name="Barrage" hidden="false" targetId="d441-87ba-5bc8-ac66" type="rule">
+          <modifiers>
+            <modifier type="append" field="name" value=" 4 (28&quot;)"/>
+          </modifiers>
+        </infoLink>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="f94e-e773-a787-9e64" name="New CategoryLink" hidden="false" targetId="32a9-788d-2727-b320" primary="true"/>
+        <categoryLink id="5b02-427c-6e76-ef88" name="Pteraphons" hidden="false" targetId="0956-252b-3af4-307f" primary="false"/>
+        <categoryLink id="3117-fd5e-4c4c-28a1" name="Spires" hidden="false" targetId="fdbd-afe7-066c-4fb9" primary="false"/>
+        <categoryLink id="ab6c-d0a9-15dd-f44e" name="Restricted (Eccentric)" hidden="false" targetId="d97f-110c-2396-892f" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="7587-567b-15d0-40c0" name="Unit Upgrades" hidden="false" collective="false" import="true" targetId="c022-c1ba-442c-3249" type="selectionEntryGroup">
+          <selectionEntryGroups>
+            <selectionEntryGroup id="4bbe-11aa-d10e-90b7" name="Select ONE:" hidden="false" collective="false" import="true">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="d817-e507-87ef-a6dc" type="max"/>
+              </constraints>
+              <entryLinks>
+                <entryLink id="2a66-4bd1-d92c-30b2" name="Ward Preceptor" hidden="false" collective="false" import="true" targetId="e0d4-95c1-0d8a-5102" type="selectionEntry">
+                  <costs>
+                    <cost name="Points" typeId="888d-4dac-90c1-beea" value="20.0"/>
+                  </costs>
+                </entryLink>
+                <entryLink id="27e3-57c7-7af7-c58b" name="Assault Preceptor" hidden="false" collective="false" import="true" targetId="d24f-2381-de17-1e27" type="selectionEntry">
+                  <costs>
+                    <cost name="Points" typeId="888d-4dac-90c1-beea" value="20.0"/>
+                  </costs>
+                </entryLink>
+              </entryLinks>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+          <entryLinks>
+            <entryLink id="7863-baf9-5f81-98c9" name="Additonal Stands" hidden="false" collective="false" import="true" targetId="15af-31f9-039c-8f9a" type="selectionEntry">
+              <costs>
+                <cost name="Points" typeId="888d-4dac-90c1-beea" value="70.0"/>
+              </costs>
+            </entryLink>
+          </entryLinks>
+        </entryLink>
+      </entryLinks>
+      <costs>
+        <cost name="Points" typeId="888d-4dac-90c1-beea" value="70.0"/>
+        <cost name="Retinue" typeId="92ff-18fb-e0e2-e189" value="0.0"/>
+        <cost name="Mastery" typeId="3af1-4791-0a97-8053" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="25ad-4c6e-50e2-b2df" name="Siegebreaker Behemoth (Eccentric)" hidden="true" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="5953-df28-3b4e-ae06" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="42e7-8903-a155-1cb6" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <profiles>
+        <profile id="0e91-7946-96f9-35a5" name="Siegebreaker Behemoth" hidden="false" typeId="3ac5-974b-5f8d-a72c" typeName="Regiment">
+          <characteristics>
+            <characteristic name="Type" typeId="cba9-e7ef-c610-9f16">Monster</characteristic>
+            <characteristic name="Class" typeId="d3c8-8d28-c5f6-fb54">Heavy</characteristic>
+            <characteristic name="M" typeId="3f09-60f5-0e32-22c5">6</characteristic>
+            <characteristic name="V" typeId="e10c-ab55-bd93-1b4b">1</characteristic>
+            <characteristic name="C" typeId="5231-1d79-754f-035a">3</characteristic>
+            <characteristic name="A" typeId="aabd-64a7-3c18-962b">8</characteristic>
+            <characteristic name="W" typeId="9c64-457b-c1a1-bc22">12</characteristic>
+            <characteristic name="R" typeId="e147-6572-3b99-292f">6</characteristic>
+            <characteristic name="D" typeId="0081-5d0a-ceb0-a7e4">4</characteristic>
+            <characteristic name="E" typeId="2f78-3c11-e20c-e37d">0</characteristic>
+            <characteristic name="Stands" typeId="2597-c728-f218-ef49">1</characteristic>
+            <characteristic name="Models on Stand" typeId="83c4-3d35-165a-7fe8">1</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="c230-dc94-2090-2973" name="Brutal Impact" hidden="false" targetId="3175-30fd-4d95-57a3" type="rule">
+          <modifiers>
+            <modifier type="append" field="name" value=" 3"/>
+          </modifiers>
+        </infoLink>
+        <infoLink id="46dd-0200-2f76-34df" name="Smite" hidden="false" targetId="755f-b837-d906-474b" type="rule"/>
+        <infoLink id="bba8-bd14-47fd-9f29" name="Fearless" hidden="false" targetId="606c-6e93-6789-d429" type="rule"/>
+        <infoLink id="6fed-90a0-1d5b-d5d3" name="Terrifying" hidden="false" targetId="4b6f-b10c-ae68-bdbc" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="c18a-2175-0811-f64c" name="New CategoryLink" hidden="false" targetId="32a9-788d-2727-b320" primary="true"/>
+        <categoryLink id="dd21-5604-c825-3e28" name="Siegebreaker Behemoth" hidden="false" targetId="1010-e4de-6f1c-a9b2" primary="false"/>
+        <categoryLink id="ebc2-7b6b-949c-bbfd" name="Spires" hidden="false" targetId="fdbd-afe7-066c-4fb9" primary="false"/>
+        <categoryLink id="df5e-d255-fa5b-e1f6" name="Restricted (Eccentric)" hidden="false" targetId="d97f-110c-2396-892f" primary="false"/>
+      </categoryLinks>
+      <costs>
+        <cost name="Points" typeId="888d-4dac-90c1-beea" value="175.0"/>
+        <cost name="Retinue" typeId="92ff-18fb-e0e2-e189" value="0.0"/>
+        <cost name="Mastery" typeId="3af1-4791-0a97-8053" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="a358-f05a-d2e5-ba98" name="Stryx (Eccentric)" hidden="true" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="5953-df28-3b4e-ae06" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="42e7-8903-a155-1cb6" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <profiles>
+        <profile id="eb0f-817f-f56f-8c35" name="Stryx" hidden="false" typeId="3ac5-974b-5f8d-a72c" typeName="Regiment">
+          <characteristics>
+            <characteristic name="Type" typeId="cba9-e7ef-c610-9f16">Infantry</characteristic>
+            <characteristic name="Class" typeId="d3c8-8d28-c5f6-fb54">Light</characteristic>
+            <characteristic name="M" typeId="3f09-60f5-0e32-22c5">10</characteristic>
+            <characteristic name="V" typeId="e10c-ab55-bd93-1b4b">1</characteristic>
+            <characteristic name="C" typeId="5231-1d79-754f-035a">1</characteristic>
+            <characteristic name="A" typeId="aabd-64a7-3c18-962b">1</characteristic>
+            <characteristic name="W" typeId="9c64-457b-c1a1-bc22">1</characteristic>
+            <characteristic name="R" typeId="e147-6572-3b99-292f">2</characteristic>
+            <characteristic name="D" typeId="0081-5d0a-ceb0-a7e4">1</characteristic>
+            <characteristic name="E" typeId="2f78-3c11-e20c-e37d">2</characteristic>
+            <characteristic name="Stands" typeId="2597-c728-f218-ef49">3</characteristic>
+            <characteristic name="Models on Stand" typeId="83c4-3d35-165a-7fe8">4</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="ef27-d987-879b-0de5" name="Fly" hidden="false" targetId="2ce6-43c4-74a5-6c11" type="rule"/>
+        <infoLink id="b839-6358-0fa5-40ca" name="Lethal Demise" hidden="false" targetId="9849-5c99-5d4d-c7f6" type="rule"/>
+        <infoLink id="0587-6f18-4cae-1103" name="Feral" hidden="false" targetId="6794-ad88-f856-d9dc" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="b055-b54a-308c-063c" name="Stryx" hidden="false" targetId="d52c-9bbf-49c3-68cd" primary="false"/>
+        <categoryLink id="6c11-ce09-7208-70dd" name="Regiment" hidden="false" targetId="32a9-788d-2727-b320" primary="true"/>
+        <categoryLink id="fc45-6812-7dc7-4e3c" name="Spires" hidden="false" targetId="fdbd-afe7-066c-4fb9" primary="false"/>
+        <categoryLink id="314c-7df6-6de8-e95a" name="Restricted (Eccentric)" hidden="false" targetId="d97f-110c-2396-892f" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="6a55-fbe3-1196-c750" name="Unit Upgrades" hidden="false" collective="false" import="true" targetId="c022-c1ba-442c-3249" type="selectionEntryGroup">
+          <entryLinks>
+            <entryLink id="da23-14eb-c08a-dd23" name="Additonal Stands" hidden="false" collective="false" import="true" targetId="15af-31f9-039c-8f9a" type="selectionEntry">
+              <costs>
+                <cost name="Points" typeId="888d-4dac-90c1-beea" value="50.0"/>
+              </costs>
+            </entryLink>
+          </entryLinks>
+        </entryLink>
+      </entryLinks>
+      <costs>
+        <cost name="Points" typeId="888d-4dac-90c1-beea" value="150.0"/>
+        <cost name="Retinue" typeId="92ff-18fb-e0e2-e189" value="0.0"/>
+        <cost name="Mastery" typeId="3af1-4791-0a97-8053" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="11e4-be06-b532-a627" name="Vanguard Clone Infiltrators (Eccentric)" hidden="true" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="5953-df28-3b4e-ae06" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="42e7-8903-a155-1cb6" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <profiles>
+        <profile id="df56-016e-1c20-dce7" name="Vanguard Clone Infiltrators" hidden="false" typeId="3ac5-974b-5f8d-a72c" typeName="Regiment">
+          <characteristics>
+            <characteristic name="Type" typeId="cba9-e7ef-c610-9f16">Infantry</characteristic>
+            <characteristic name="Class" typeId="d3c8-8d28-c5f6-fb54">Light</characteristic>
+            <characteristic name="M" typeId="3f09-60f5-0e32-22c5">6</characteristic>
+            <characteristic name="V" typeId="e10c-ab55-bd93-1b4b">2</characteristic>
+            <characteristic name="C" typeId="5231-1d79-754f-035a">2</characteristic>
+            <characteristic name="A" typeId="aabd-64a7-3c18-962b">2</characteristic>
+            <characteristic name="W" typeId="9c64-457b-c1a1-bc22">1</characteristic>
+            <characteristic name="R" typeId="e147-6572-3b99-292f">3</characteristic>
+            <characteristic name="D" typeId="0081-5d0a-ceb0-a7e4">1</characteristic>
+            <characteristic name="E" typeId="2f78-3c11-e20c-e37d">2</characteristic>
+            <characteristic name="Stands" typeId="2597-c728-f218-ef49">3</characteristic>
+            <characteristic name="Models on Stand" typeId="83c4-3d35-165a-7fe8">4</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="3f18-0f21-f22e-6c44" name="Fluid Formation" hidden="false" targetId="24b4-65d7-2928-17ea" type="rule"/>
+        <infoLink id="926e-81d7-6204-f52b" name="Vanguard" hidden="false" targetId="0528-5a8a-71f2-fd28" type="rule"/>
+        <infoLink id="90b7-5a24-3110-e649" name="Barrage" hidden="false" targetId="d441-87ba-5bc8-ac66" type="rule">
+          <modifiers>
+            <modifier type="append" field="name" value=" 2 (18&quot;)"/>
+          </modifiers>
+        </infoLink>
+        <infoLink id="cc11-cba5-e049-e581" name="Deadly Shot" hidden="false" targetId="e6bd-c8dd-dfd5-8ec4" type="rule"/>
+        <infoLink id="28f4-813a-663c-cd53" name="Snapfire" hidden="false" targetId="f9fb-1b81-9973-fd10" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="2696-ddc2-b925-03ff" name="Vanguard Clone Infiltrators" hidden="false" targetId="6a46-21e6-d9db-8c4d" primary="false"/>
+        <categoryLink id="2670-3e92-9683-2fae" name="Regiment" hidden="false" targetId="32a9-788d-2727-b320" primary="true"/>
+        <categoryLink id="6411-de8a-0cbf-4fb4" name="Spires" hidden="false" targetId="fdbd-afe7-066c-4fb9" primary="false"/>
+        <categoryLink id="3dc2-614c-4f32-fd06" name="Restricted (Eccentric)" hidden="false" targetId="d97f-110c-2396-892f" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="283b-9bf9-a0ee-b099" name="Unit Upgrades" hidden="false" collective="false" import="true" targetId="c022-c1ba-442c-3249" type="selectionEntryGroup">
+          <entryLinks>
+            <entryLink id="1aef-3373-80ad-7bac" name="Additonal Stands" hidden="false" collective="false" import="true" targetId="15af-31f9-039c-8f9a" type="selectionEntry">
+              <costs>
+                <cost name="Points" typeId="888d-4dac-90c1-beea" value="65.0"/>
+              </costs>
+            </entryLink>
+            <entryLink id="dc01-15a2-ed35-5568" name="Leader" hidden="false" collective="false" import="true" targetId="8568-7db2-4d81-9e8e" type="selectionEntry">
+              <costs>
+                <cost name="Points" typeId="888d-4dac-90c1-beea" value="10.0"/>
+              </costs>
+            </entryLink>
+          </entryLinks>
+        </entryLink>
+      </entryLinks>
+      <costs>
+        <cost name="Points" typeId="888d-4dac-90c1-beea" value="195.0"/>
+        <cost name="Retinue" typeId="92ff-18fb-e0e2-e189" value="0.0"/>
+        <cost name="Mastery" typeId="3af1-4791-0a97-8053" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="296f-a133-fab7-747f" name="Vanguard Clones (Eccentric)" hidden="true" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="5953-df28-3b4e-ae06" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="42e7-8903-a155-1cb6" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <profiles>
+        <profile id="89cd-7b95-4caa-47b1" name="Vanguard Clones" hidden="false" typeId="3ac5-974b-5f8d-a72c" typeName="Regiment">
+          <characteristics>
+            <characteristic name="Type" typeId="cba9-e7ef-c610-9f16">Infantry</characteristic>
+            <characteristic name="Class" typeId="d3c8-8d28-c5f6-fb54">Medium</characteristic>
+            <characteristic name="M" typeId="3f09-60f5-0e32-22c5">6</characteristic>
+            <characteristic name="V" typeId="e10c-ab55-bd93-1b4b">2</characteristic>
+            <characteristic name="C" typeId="5231-1d79-754f-035a">2</characteristic>
+            <characteristic name="A" typeId="aabd-64a7-3c18-962b">2</characteristic>
+            <characteristic name="W" typeId="9c64-457b-c1a1-bc22">1</characteristic>
+            <characteristic name="R" typeId="e147-6572-3b99-292f">3</characteristic>
+            <characteristic name="D" typeId="0081-5d0a-ceb0-a7e4">2</characteristic>
+            <characteristic name="E" typeId="2f78-3c11-e20c-e37d">2</characteristic>
+            <characteristic name="Stands" typeId="2597-c728-f218-ef49">3</characteristic>
+            <characteristic name="Models on Stand" typeId="83c4-3d35-165a-7fe8">4</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="6887-f688-b6ce-67ac" name="Shield" hidden="false" targetId="e4a5-8d43-95ab-f2cc" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="cd2a-cc93-91a1-8d4e" name="New CategoryLink" hidden="false" targetId="32a9-788d-2727-b320" primary="true"/>
+        <categoryLink id="d70e-1f1d-3a4f-412e" name="Vanguard Clones" hidden="false" targetId="caf6-7c1b-bbf5-47b9" primary="false"/>
+        <categoryLink id="25cc-e539-e1da-4a34" name="Restricted (Eccentric)" hidden="false" targetId="d97f-110c-2396-892f" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="2f78-147e-1f87-3857" name="Unit Upgrades" hidden="false" collective="false" import="true" targetId="c022-c1ba-442c-3249" type="selectionEntryGroup">
+          <selectionEntryGroups>
+            <selectionEntryGroup id="fe34-ff2c-08f8-e90e" name="Select ONE:" hidden="false" collective="false" import="true">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="23be-cf8d-fc3b-fa6b" type="max"/>
+              </constraints>
+              <entryLinks>
+                <entryLink id="a0a6-23be-6a2f-47e9" name="Ward Preceptor" hidden="false" collective="false" import="true" targetId="e0d4-95c1-0d8a-5102" type="selectionEntry">
+                  <costs>
+                    <cost name="Points" typeId="888d-4dac-90c1-beea" value="45.0"/>
+                  </costs>
+                </entryLink>
+                <entryLink id="f860-72cf-b962-57e1" name="Assault Preceptor" hidden="false" collective="false" import="true" targetId="d24f-2381-de17-1e27" type="selectionEntry">
+                  <costs>
+                    <cost name="Points" typeId="888d-4dac-90c1-beea" value="25.0"/>
+                  </costs>
+                </entryLink>
+              </entryLinks>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+          <entryLinks>
+            <entryLink id="dde3-26cb-ff81-3ea6" name="Additonal Stands" hidden="false" collective="false" import="true" targetId="15af-31f9-039c-8f9a" type="selectionEntry">
+              <costs>
+                <cost name="Points" typeId="888d-4dac-90c1-beea" value="55.0"/>
+              </costs>
+            </entryLink>
+            <entryLink id="af6b-81d4-e2b8-f0bf" name="Standard Bearer" hidden="false" collective="false" import="true" targetId="dea1-3fab-2a17-301d" type="selectionEntry">
+              <costs>
+                <cost name="Points" typeId="888d-4dac-90c1-beea" value="10.0"/>
+              </costs>
+            </entryLink>
+            <entryLink id="d39b-a189-677b-4ad1" name="Leader" hidden="false" collective="false" import="true" targetId="8568-7db2-4d81-9e8e" type="selectionEntry">
+              <costs>
+                <cost name="Points" typeId="888d-4dac-90c1-beea" value="15.0"/>
+              </costs>
+            </entryLink>
+          </entryLinks>
+        </entryLink>
+      </entryLinks>
+      <costs>
+        <cost name="Points" typeId="888d-4dac-90c1-beea" value="165.0"/>
         <cost name="Retinue" typeId="92ff-18fb-e0e2-e189" value="0.0"/>
         <cost name="Mastery" typeId="3af1-4791-0a97-8053" value="0.0"/>
       </costs>
