@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="dd30-0080-e51a-c53f" name="Conquest: Last Argument of Kings" revision="4" battleScribeVersion="2.03" authorName="Ragnarok494" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="dd30-0080-e51a-c53f" name="Conquest: Last Argument of Kings" revision="5" battleScribeVersion="2.03" authorName="Ragnarok494" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <publications>
     <publication id="aac0-c2ce-54be-2796" name="Rulebook v1.03" shortName="Rulbook" publisher="Para Bellum Wargames Ltd" publicationDate="June 24 2020" publisherUrl="https://www.para-bellum.com/wp-content/uploads/2020/06/Companion_Rules_v.103.pdf"/>
   </publications>
