@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="7945-a0c4-c7cc-7377" name="Spires" revision="2" battleScribeVersion="2.03" library="false" gameSystemId="dd30-0080-e51a-c53f" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="7945-a0c4-c7cc-7377" name="Spires" revision="3" battleScribeVersion="2.03" library="false" gameSystemId="dd30-0080-e51a-c53f" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="af1e-f846-6f8d-7af8" name="Spires Army List"/>
   </publications>
@@ -1126,6 +1126,26 @@
                 <condition field="selections" scope="5953-df28-3b4e-ae06" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5e23-6ac0-b426-3173" type="atLeast"/>
               </conditions>
             </modifier>
+            <modifier type="set-primary" field="category" value="ad96-d57a-9fbd-90b7">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8c95-519e-22fb-30c3" type="equalTo"/>
+                    <condition field="selections" scope="5953-df28-3b4e-ae06" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="63b3-83a8-2288-12ff" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" field="hidden" value="false">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8c95-519e-22fb-30c3" type="equalTo"/>
+                    <condition field="selections" scope="5953-df28-3b4e-ae06" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="63b3-83a8-2288-12ff" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
           </modifiers>
         </modifierGroup>
         <modifierGroup>
@@ -2247,7 +2267,11 @@ of Mutations, instead of the one normally allowed. It pays full points for these
         <categoryLink id="87c6-89b6-c7e6-251c" name="Tactical Restricted" hidden="false" targetId="c219-7875-8027-c887" primary="false"/>
       </categoryLinks>
       <entryLinks>
-        <entryLink id="7ee4-24b6-8cd2-0dbd" name="Mutations" hidden="false" collective="false" import="true" targetId="d090-182d-5841-f604" type="selectionEntryGroup"/>
+        <entryLink id="7ee4-24b6-8cd2-0dbd" name="Mutations" hidden="false" collective="false" import="true" targetId="d090-182d-5841-f604" type="selectionEntryGroup">
+          <modifiers>
+            <modifier type="increment" field="664f-dfaa-beb7-5709" value="1.0"/>
+          </modifiers>
+        </entryLink>
         <entryLink id="f68f-4aa5-45ef-dcc0" name="Combat" hidden="false" collective="false" import="true" targetId="c06e-c761-4683-05f9" type="selectionEntryGroup">
           <categoryLinks>
             <categoryLink id="690e-53c9-94e6-608c" name="Combat Restricted" hidden="false" targetId="0bd0-c6e7-b2d6-0c48" primary="false"/>
@@ -2405,6 +2429,12 @@ of Mutations, instead of the one normally allowed. It pays full points for these
       </constraints>
       <infoLinks>
         <infoLink id="60b5-a090-358b-8d5f" name="Biotic Hive" hidden="false" targetId="2eb7-38cf-2129-cfae" type="profile"/>
+        <infoLink id="b68c-6a89-c9a3-d0b3" name="Barrage" hidden="false" targetId="d441-87ba-5bc8-ac66" type="rule">
+          <modifiers>
+            <modifier type="append" field="name" value="4 (20&quot;)"/>
+          </modifiers>
+        </infoLink>
+        <infoLink id="e44f-34fd-1ffa-5bc8" name="Deadly Shot" hidden="false" targetId="e6bd-c8dd-dfd5-8ec4" type="rule"/>
       </infoLinks>
       <costs>
         <cost name="Points" typeId="888d-4dac-90c1-beea" value="0.0"/>
@@ -2535,6 +2565,8 @@ of Mutations, instead of the one normally allowed. It pays full points for these
       </constraints>
       <infoLinks>
         <infoLink id="363f-b1e8-73b5-89bd" name="Venom" hidden="false" targetId="077a-3afe-a3ba-6ce9" type="profile"/>
+        <infoLink id="28d0-64dc-093b-15ed" name="Deadly Shot" hidden="false" targetId="e6bd-c8dd-dfd5-8ec4" type="rule"/>
+        <infoLink id="3005-b899-cb37-f25c" name="Deadly Blades" hidden="false" targetId="dd38-6915-7a0d-e0b3" type="rule"/>
       </infoLinks>
       <costs>
         <cost name="Points" typeId="888d-4dac-90c1-beea" value="0.0"/>
@@ -4188,25 +4220,17 @@ of Mutations, instead of the one normally allowed. It pays full points for these
   <sharedProfiles>
     <profile id="c8a3-325f-4f71-f63b" name="Degenerative Aura" hidden="false" typeId="0f4e-c145-0ce2-0949" typeName="Mutation">
       <characteristics>
-        <characteristic name="Description" typeId="555c-20e2-c6b0-8e78">Enemy Regiments in contact with the
-Character&apos;s Regiment have the Decay (3)
-Draw Event (Decay 2 if it is a Brute Regiment,
-Decay 1 if it is a Monster Regiment).</characteristic>
+        <characteristic name="Description" typeId="555c-20e2-c6b0-8e78">Enemy Regiments in contact with the Character&apos;s Regiment have the Decay (3) Draw Event (Decay 2 if it is a Brute Regiment, Decay 1 if it is a Monster Regiment).</characteristic>
       </characteristics>
     </profile>
     <profile id="95ee-e12e-6b46-943d" name="Pheromantic Override" hidden="false" typeId="0f4e-c145-0ce2-0949" typeName="Mutation">
       <characteristics>
-        <characteristic name="Description" typeId="555c-20e2-c6b0-8e78">Once per game, the Character Stand gains
-the following Draw Event in addition to any
-other: Choose a friendly Regiment within 6”.
-That Regiment may immediately perform a
-free Clash, Volley or March Action.</characteristic>
+        <characteristic name="Description" typeId="555c-20e2-c6b0-8e78">Once per game, the Character Stand gains the following Draw Event in addition to any other: Choose a friendly Regiment within 6”. That Regiment may immediately perform a free Clash, Volley or March Action.</characteristic>
       </characteristics>
     </profile>
     <profile id="b7c1-6769-3b80-8e3e" name="Biotic Wellspring" hidden="false" typeId="0f4e-c145-0ce2-0949" typeName="Mutation">
       <characteristics>
-        <characteristic name="Description" typeId="555c-20e2-c6b0-8e78">The Character has the Biotic Renewal Draw
-Event.</characteristic>
+        <characteristic name="Description" typeId="555c-20e2-c6b0-8e78">The Character has the Biotic Renewal Draw Event.</characteristic>
       </characteristics>
     </profile>
     <profile id="9f52-9e31-9f7b-17ec" name="Heightened Reflexes" hidden="false" typeId="0f4e-c145-0ce2-0949" typeName="Mutation">
@@ -4216,38 +4240,22 @@ Event.</characteristic>
     </profile>
     <profile id="2f1d-cd73-1783-5c79" name="Cascading Degeneration" hidden="false" typeId="0f4e-c145-0ce2-0949" typeName="Mutation">
       <characteristics>
-        <characteristic name="Description" typeId="555c-20e2-c6b0-8e78">Whenever the Character&apos;s Regiment processes
-a Decay Draw Event of any kind, all enemy
-Regiments in base contact also possess the
-Decay (4) Draw Event (Decay 3 if it is a Brute
-Regiment, Decay 2 if it is a Monster Regiment).</characteristic>
+        <characteristic name="Description" typeId="555c-20e2-c6b0-8e78">Whenever the Character&apos;s Regiment processes a Decay Draw Event of any kind, all enemy Regiments in base contact also possess the Decay (4) Draw Event (Decay 3 if it is a Brute Regiment, Decay 2 if it is a Monster Regiment).</characteristic>
       </characteristics>
     </profile>
     <profile id="bb71-0620-298c-3b70" name="Architect&apos;s Touch" hidden="false" typeId="0f4e-c145-0ce2-0949" typeName="Mutation">
       <characteristics>
-        <characteristic name="Description" typeId="555c-20e2-c6b0-8e78">The Character Stand and any Regiment it
-has joined reduce all Decay Draw Events
-inflicted upon them by -1 (e.g. Decay 3 becomes
-Decay 2).</characteristic>
+        <characteristic name="Description" typeId="555c-20e2-c6b0-8e78">The Character Stand and any Regiment it has joined reduce all Decay Draw Events inflicted upon them by -1 (e.g. Decay 3 becomes Decay 2).</characteristic>
       </characteristics>
     </profile>
     <profile id="2932-df7d-7249-a026" name="Cloned Redundancy" hidden="false" typeId="0f4e-c145-0ce2-0949" typeName="Mutation">
       <characteristics>
-        <characteristic name="Description" typeId="555c-20e2-c6b0-8e78">Once per game, when this Character is slain,
-roll a D6. On a score of 4+, you may remove
-another friendly Character Stand from the
-Battlefield, and return this Character Stand
-to the Battlefield in its place with as many
-wounds as the character being removed had.
-If this Character is your Warlord, they are
-not considered to be Slain for Scenario and
-Objective purposes.</characteristic>
+        <characteristic name="Description" typeId="555c-20e2-c6b0-8e78">Once per game, when this Character is slain, roll a D6. On a score of 4+, you may remove another friendly Character Stand from the Battlefield, and return this Character Stand to the Battlefield in its place with as many wounds as the character being removed had. If this Character is your Warlord, they are not considered to be Slain for Scenario and Objective purposes.</characteristic>
       </characteristics>
     </profile>
     <profile id="91b8-0af0-0af4-2ebe" name="Enhanced Reactions" hidden="false" typeId="0f4e-c145-0ce2-0949" typeName="Mutation">
       <characteristics>
-        <characteristic name="Description" typeId="555c-20e2-c6b0-8e78">The Character Stand may Re-roll 1 die every
-time they are required to make an Injury roll.</characteristic>
+        <characteristic name="Description" typeId="555c-20e2-c6b0-8e78">The Character Stand may Re-roll 1 die every time they are required to make an Injury roll.</characteristic>
       </characteristics>
     </profile>
     <profile id="5c18-0175-d0a1-7e77" name="Redundant Biomantic Structure" hidden="false" typeId="0f4e-c145-0ce2-0949" typeName="Mutation">
@@ -4257,43 +4265,27 @@ time they are required to make an Injury roll.</characteristic>
     </profile>
     <profile id="d302-324c-0f88-e94a" name="Adaptive Evolution" hidden="false" typeId="0f4e-c145-0ce2-0949" typeName="Mutation">
       <characteristics>
-        <characteristic name="Description" typeId="555c-20e2-c6b0-8e78">Whenever this Character&apos;s Command Card is
-drawn from the Command Stack, roll a D6.
-On a score of 4+ or more, you may increase
-its Clash, Volley, Resolve or Defence by +1
-(to a maximum of 5).</characteristic>
+        <characteristic name="Description" typeId="555c-20e2-c6b0-8e78">Whenever this Character&apos;s Command Card is drawn from the Command Stack, roll a D6. On a score of 4+ or more, you may increase its Clash, Volley, Resolve or Defence by +1 (to a maximum of 5).</characteristic>
       </characteristics>
     </profile>
     <profile id="e8b4-f31c-44a7-ab0b" name="Adaptive Senses" hidden="false" typeId="0f4e-c145-0ce2-0949" typeName="Mutation">
       <characteristics>
-        <characteristic name="Description" typeId="555c-20e2-c6b0-8e78">Evasion Rolls cannot be taken against Hits
-caused by this Character.</characteristic>
+        <characteristic name="Description" typeId="555c-20e2-c6b0-8e78">Evasion Rolls cannot be taken against Hits caused by this Character.</characteristic>
       </characteristics>
     </profile>
     <profile id="de35-1a1e-cffc-3d07" name="Biomantic Plague Node" hidden="false" typeId="0f4e-c145-0ce2-0949" typeName="Mutation">
       <characteristics>
-        <characteristic name="Description" typeId="555c-20e2-c6b0-8e78">Whenever a Wound is allocated to the
-Character, roll a D6. On a score of 3 or less,
-an enemy Regiment or Character Stand of your
-choice within 6&quot; also has a Wound allocated
-to it. On a roll of 1, all enemy Regiments and
-Character Stands within 6” suffer this effect.</characteristic>
+        <characteristic name="Description" typeId="555c-20e2-c6b0-8e78">Whenever a Wound is allocated to the Character, roll a D6. On a score of 3 or less, an enemy Regiment or Character Stand of your choice within 6&quot; also has a Wound allocated to it. On a roll of 1, all enemy Regiments and Character Stands within 6” suffer this effect.</characteristic>
       </characteristics>
     </profile>
     <profile id="2eb7-38cf-2129-cfae" name="Biotic Hive" hidden="false" typeId="0f4e-c145-0ce2-0949" typeName="Mutation">
       <characteristics>
-        <characteristic name="Description" typeId="555c-20e2-c6b0-8e78">The Character has the Barrage 4 (20&quot;, Deadly
-Shot) special rule.</characteristic>
+        <characteristic name="Description" typeId="555c-20e2-c6b0-8e78">The Character has the Barrage 4 (20&quot;, Deadly Shot) special rule.</characteristic>
       </characteristics>
     </profile>
     <profile id="8ec6-4ec5-6fa3-13ae" name="Burrowing Parasites" hidden="false" typeId="0f4e-c145-0ce2-0949" typeName="Mutation">
       <characteristics>
-        <characteristic name="Description" typeId="555c-20e2-c6b0-8e78">The Character Stand gains the Barrage (2)
-(30”, Armor Piercing 1) Special Rule. If the
-Character Stand already has the Barrage
-Special Rule then its Barrage value is increased
-by 2. Furthermore, it’s Armor Piercing value
-increases +1.</characteristic>
+        <characteristic name="Description" typeId="555c-20e2-c6b0-8e78">The Character Stand gains the Barrage (2) (30”, Armor Piercing 1) Special Rule. If the Character Stand already has the Barrage Special Rule then its Barrage value is increased by 2. Furthermore, it’s Armor Piercing value increases +1.</characteristic>
       </characteristics>
     </profile>
     <profile id="cac5-1dc1-e29a-2e55" name="Command Pheromones" hidden="false" typeId="0f4e-c145-0ce2-0949" typeName="Mutation">
@@ -4303,41 +4295,22 @@ increases +1.</characteristic>
     </profile>
     <profile id="077a-3afe-a3ba-6ce9" name="Venom" hidden="false" typeId="0f4e-c145-0ce2-0949" typeName="Mutation">
       <characteristics>
-        <characteristic name="Description" typeId="555c-20e2-c6b0-8e78">The Character has the Deadly Blades and
-Deadly Shots special rule.</characteristic>
+        <characteristic name="Description" typeId="555c-20e2-c6b0-8e78">The Character has the Deadly Blades and Deadly Shots special rule.</characteristic>
       </characteristics>
     </profile>
     <profile id="2c35-93ac-6f48-b7b7" name="Adrenal Surge" hidden="false" typeId="0f4e-c145-0ce2-0949" typeName="Mutation">
       <characteristics>
-        <characteristic name="Description" typeId="555c-20e2-c6b0-8e78">When this Character takes an Action, you may
-have it gain +2 Clash and +4 Attacks. If you
-do, remove the Character Stand as a casualty
-once the Action is complete.</characteristic>
+        <characteristic name="Description" typeId="555c-20e2-c6b0-8e78">When this Character takes an Action, you may have it gain +2 Clash and +4 Attacks. If you do, remove the Character Stand as a casualty once the Action is complete.</characteristic>
       </characteristics>
     </profile>
     <profile id="c715-745c-0be4-c2c3" name="Avatar Projection" hidden="false" typeId="0f4e-c145-0ce2-0949" typeName="Mutation">
       <characteristics>
-        <characteristic name="Description" typeId="555c-20e2-c6b0-8e78">Mutation.)
-A Character with this Mutation changes
-his Troop Type to Brute and may no longer
-purchase a Retinue. The character can thus
-legally join Brute Units and can gain access
-to new rules such as Impact Hits, etc.</characteristic>
+        <characteristic name="Description" typeId="555c-20e2-c6b0-8e78">A Character with this Mutation changes his Troop Type to Brute and may no longer purchase a Retinue. The character can thus legally join Brute Units and can gain access to new rules such as Impact Hits, etc.</characteristic>
       </characteristics>
     </profile>
     <profile id="6296-aa70-b0c3-d696" name="Sensory Augmentation" hidden="false" typeId="0f4e-c145-0ce2-0949" typeName="Mutation">
       <characteristics>
-        <characteristic name="Description" typeId="555c-20e2-c6b0-8e78">When this Character&apos;s Command Card is
-drawn, you may both look at the top Command
-Card of your opponent’s Command Stack and
-draw and act with your next Command Card
-instead of this Character’s Command Card.
-If you do, place the Character&apos;s Command
-Card on top of the Command Stack once the
-Action is resolved. Return your opponent’s
-Command Card to their Command Stack.
-This Ability can only be activated once
-every Round.</characteristic>
+        <characteristic name="Description" typeId="555c-20e2-c6b0-8e78">When this Character&apos;s Command Card is drawn, you may both look at the top Command Card of your opponent’s Command Stack and draw and act with your next Command Card instead of this Character’s Command Card. If you do, place the Character&apos;s Command Card on top of the Command Stack once the Action is resolved. Return your opponent’s Command Card to their Command Stack. This Ability can only be activated once every Round.</characteristic>
       </characteristics>
     </profile>
     <profile id="472c-0c61-cae9-cb05" name="Ablative Flesh" hidden="false" typeId="0f4e-c145-0ce2-0949" typeName="Mutation">
@@ -4406,8 +4379,7 @@ The Regiment has +2 March until the end of the Turn. The Character then takes it
     </profile>
     <profile id="5667-eceb-9231-0230" name="Essence Transfer" hidden="false" typeId="bd71-7049-2a3a-f3e8" typeName="Biomancy">
       <characteristics>
-        <characteristic name="Effect" typeId="fe42-ecec-ebca-c42c">Target one friendly Regiment within 18&quot;. That Regiment suffers 2D6 Wounds. Draw your next Command Card. If that Regiment is of the same type, it regains 2D6 Wounds. Then, activate the Regiment whose Command Card
-you just drew. The Character then takes its Action.</characteristic>
+        <characteristic name="Effect" typeId="fe42-ecec-ebca-c42c">Target one friendly Regiment within 18&quot;. That Regiment suffers 2D6 Wounds. Draw your next Command Card. If that Regiment is of the same type, it regains 2D6 Wounds. Then, activate the Regiment whose Command Card you just drew. The Character then takes its Action.</characteristic>
       </characteristics>
     </profile>
     <profile id="831b-6f1e-c684-601d" name="Grant Virulence" hidden="false" typeId="bd71-7049-2a3a-f3e8" typeName="Biomancy">

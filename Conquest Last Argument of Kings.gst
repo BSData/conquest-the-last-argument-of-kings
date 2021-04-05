@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="dd30-0080-e51a-c53f" name="Conquest: Last Argument of Kings" revision="2" battleScribeVersion="2.03" authorName="Ragnarok494" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="dd30-0080-e51a-c53f" name="Conquest: Last Argument of Kings" revision="3" battleScribeVersion="2.03" authorName="Ragnarok494" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <publications>
     <publication id="aac0-c2ce-54be-2796" name="Rulebook v1.03" shortName="Rulbook" publisher="Para Bellum Wargames Ltd" publicationDate="June 24 2020" publisherUrl="https://www.para-bellum.com/wp-content/uploads/2020/06/Companion_Rules_v.103.pdf"/>
   </publications>
@@ -1082,47 +1082,16 @@ Character’s Tier in Tactics.</description>
   </sharedSelectionEntryGroups>
   <sharedRules>
     <rule id="d692-c6ee-70d3-2747" name="Arcing Fire" hidden="false">
-      <description>If a Regiment composed entirely
-of Stands with this Special Rule (excluding
-Characters) uses a Take Aim Action, it may
-ignore Line of Sight when making a Ranged
-Attack to any enemy Regiment that is within
-Line of Sight of any friendly Regiment. If it
-does so, it does not receive the normal +1 To
-Hit from the Take Aim Action. Note, however,
-that the shot may still count as Obscured if
-the target is at Long Range. </description>
+      <description>If a Regiment composed entirely of Stands with this Special Rule (excluding Characters) uses a Take Aim Action, it may ignore Line of Sight when making a Ranged Attack to any enemy Regiment that is within Line of Sight of any friendly Regiment. If it does so, it does not receive the normal +1 To Hit from the Take Aim Action. Note, however, that the shot may still count as Obscured if the target is at Long Range. </description>
     </rule>
     <rule id="e4a0-87c2-e969-a2e4" name="Armour Piercing" hidden="false">
-      <description>Enemy Regiments suer
-a penalty to their Defence against Ranged
-Attacks with this special rule equal to the rule’s
-attribute. E.g. A unit with Armor Piercing 2
-would penalize its targets Defence by 2 points
-when defending against its Ranged Attacks.</description>
+      <description>Enemy Regiments suffer a penalty to their Defence against Ranged Attacks with this special rule equal to the rule’s attribute. E.g. A unit with Armor Piercing 2 would penalize its targets Defence by 2 points when defending against its Ranged Attacks.</description>
     </rule>
     <rule id="9b85-3dfc-da79-0d25" name="Aura of Death" hidden="false">
-      <description>At the start of each Supremacy
-Phase, each enemy Regiment in contact with
-Stands with this special rule suers one Hit
-for each Stand in contact with it that has this
-special rule (it may take Injury Rolls as normal).</description>
+      <description>At the start of each Supremacy Phase, each enemy Regiment in contact with Stands with this special rule suffers one Hit for each Stand in contact with it that has this special rule (it may take Injury Rolls as normal).</description>
     </rule>
     <rule id="d441-87ba-5bc8-ac66" name="Barrage" hidden="false">
-      <description>A Stand with this special rule
-contributes shots if its Regiment takes a
-Volley Action. e Range, special rules and
-number of shots of that Barrage are given in
-parentheses aer the Barrage special rule, e.g.
-Barrage 2 (24&quot;, Armor Piercing 1) indicates
-that that Stand has a Barrage special rule with
-2 shots, a 24&quot; range and the Armor Piercing 1
-special rule. us, the Barrage Value would be
-multiplied by the number of models in the Stand
-to determine how many Ranged Attacks that
-Stand contributes to the Regiment.
-If your Stand has several Barrage proles, you
-may choose which one it uses.</description>
+      <description>A Stand with this special rule contributes shots if its Regiment takes a Volley Action. e Range, special rules and number of shots of that Barrage are given in parentheses aer the Barrage special rule, e.g. Barrage 2 (24&quot;, Armor Piercing 1) indicates that that Stand has a Barrage special rule with 2 shots, a 24&quot; range and the Armor Piercing 1 special rule. us, the Barrage Value would be multiplied by the number of models in the Stand to determine how many Ranged Attacks that Stand contributes to the Regiment. If your Stand has several Barrage proles, you may choose which one it uses.</description>
     </rule>
     <rule id="f4e5-5357-c478-a752" name="Bastion" hidden="false">
       <description>Until end of Turn, the Stand (and Stands in its Regiment) have +1 Defence</description>
@@ -1131,115 +1100,61 @@ may choose which one it uses.</description>
       <description>Roll a D6. e Regiment Heals a number of Wounds equal to the result. then, roll a D6 for each other friendly Regiment within 8&quot; of the active Character’s Stand. at Regiment Heals a number of Wounds equal to half the result (rounding down). If the Regiments aected do not have the Infantry Type, reduce the Healing value to D3 and half that value (rounding up) respectively. </description>
     </rule>
     <rule id="0c83-b23a-29ef-dfbd" name="Blessed" hidden="false">
-      <description>Once per Turn, this Stand can
-re-roll all failed To Hit rolls or re-roll
-all failed Defence Rolls. All Stands in a
-Regiment must use this rule at the same
-time (if they have it). </description>
+      <description>Once per Turn, this Stand can re-roll all failed To Hit rolls or re-roll all failed Defence Rolls. All Stands in a Regiment must use this rule at the same time (if they have it). </description>
     </rule>
     <rule id="73a0-99f3-574e-ad07" name="Bloodlust" hidden="false">
-      <description>When you take an Action for a
-Regiment containing one or more models with
-this special rule, and the Regiment is not in
-contact with an enemy, roll a D6.
-If the result is equal to or less than the highest
-Resolve in the Acting Regiment, you may
-choose an Action as normal. If the result is
-higher, you must choose a Charge Action, if
-there is a viable target for the Charge. If there
-is no viable Charge target, you must perform
-a March Action, and March the Regiment as
-close as possible to the nearest enemy Regiment
-by the most direct route. </description>
+      <description>When you take an Action for a Regiment containing one or more models with this special rule, and the Regiment is not in contact with an enemy, roll a D6. If the result is equal to or less than the highest Resolve in the Acting Regiment, you may choose an Action as normal. If the result is higher, you must choose a Charge Action, if there is a viable target for the Charge. If there is no viable Charge target, you must perform a March Action, and March the Regiment as close as possible to the nearest enemy Regiment by the most direct route. </description>
     </rule>
     <rule id="3175-30fd-4d95-57a3" name="Brutal Impact" hidden="false">
-      <description>When a Regiment makes
-Defence Rolls against Impact Hits caused
-by a Stand with this special rule, it counts
-its Defence characteristic as being X points
+      <description>When a Regiment makes Defence Rolls against Impact Hits caused by a Stand with this special rule, it counts its Defence characteristic as being X points
 lower.</description>
     </rule>
     <rule id="d32d-0a19-a7ee-caa1" name="Burnout" hidden="false">
-      <description>: Choose one of the following:
+      <description>Choose one of the following:
 • Nothing happens.
 • All Stands in the Regiment with this Draw Event have the Decay 3 Draw Event and +1 Clash and +2 March this Turn.</description>
     </rule>
     <rule id="c1b8-7404-b20b-ebe5" name="Cleave" hidden="false">
-      <description>Enemy Regiments suer a penalty
-to their Defence against melee attacks with
-this special rule equal to the rule’s attribute.</description>
+      <description>Enemy Regiments suer a penalty to their Defence against melee attacks with this special rule equal to the rule’s attribute.</description>
     </rule>
     <rule id="dd38-6915-7a0d-e0b3" name="Deadly Blades" hidden="false">
-      <description>When Models with more than
-one Wound fail a Defence Roll against Melee
-Attacks from a unit with this special rule, they
-must add two Wounds to the Wound Pool per
-failed roll, rather than one. </description>
+      <description>When Models with more than one Wound fail a Defence Roll against Melee Attacks from a unit with this special rule, they must add two Wounds to the Wound Pool per failed roll, rather than one. </description>
     </rule>
     <rule id="e6bd-c8dd-dfd5-8ec4" name="Deadly Shot" hidden="false">
-      <description>When Models with more than
-one Wound fail a Defence Roll against Ranged
-Attacks from a unit with this special rule, they
-must add two Wounds to the Wound Pool per
-failed roll, rather than one. </description>
+      <description>When Models with more than one Wound fail a Defence Roll against Ranged Attacks from a unit with this special rule, they must add two Wounds to the Wound Pool per failed roll, rather than one. </description>
     </rule>
     <rule id="58f0-feb5-3885-2507" name="Decay" hidden="false">
-      <description>Roll a number of dice equal to the Draw Event’s attribute for each Stand in the Regiment with this special rule. For each roll of 5 or 6, the unit suers a Wound. Casualties suered from Decay do not cause Morale Tests. If a Stand has several types of the Decay special
-rule, add all the dice together. The Decay Draw Event is always resolved in addition to any other Draw Events that a Regiment has. e Decay Draw Event is always resolved at the end of a Regiment’s Activation</description>
+      <description>Roll a number of dice equal to the Draw Event’s attribute for each Stand in the Regiment with this special rule. For each roll of 5 or 6, the unit suers a Wound. Casualties suered from Decay do not cause Morale Tests. If a Stand has several types of the Decay special rule, add all the dice together. The Decay Draw Event is always resolved in addition to any other Draw Events that a Regiment has. e Decay Draw Event is always resolved at the end of a Regiment’s Activation</description>
     </rule>
     <rule id="46cc-e60c-05fb-9971" name="Devout" hidden="false">
-      <description>If a Stand with the Priest special rule
-is targeting a Regiment with the Devout special
-rule, it automatically converts one Spellcasting
-failure to a success.</description>
+      <description>If a Stand with the Priest special rule is targeting a Regiment with the Devout special rule, it automatically converts one Spellcasting failure to a success.</description>
     </rule>
     <rule id="f263-28b7-a6a3-c155" name="Double Time" hidden="false">
       <description>Draw the next Command Card. If that Command Card is for the active Character’s Regiment (i.e. the Regiment the Character is in), that Regiment Acts immediately. If it Marches twice, it may make an additional March Action. Once the Regiment has completed its Actions, the Character then takes his or her Action.If the drawn Command Card is not the Character’s Regiment, place it on the bottom of your Command Stack. e Character then takes his or her Action.</description>
     </rule>
     <rule id="606c-6e93-6789-d429" name="Fearless" hidden="false">
-      <description>A Regiment containing at least
-one Stand with this special rule ignores the
-“Terrifying” and “Fearsome” special rules
-of all enemy Regiments it is in contact with.</description>
+      <description>A Regiment containing at least one Stand with this special rule ignores the “Terrifying” and “Fearsome” special rules of all enemy Regiments it is in contact with.</description>
     </rule>
     <rule id="7eca-5688-c206-25a6" name="Fiend Hunter" hidden="false">
-      <description>Stands with this special rule
-re-roll failed To Hit rolls against Monsters</description>
+      <description>Stands with this special rule re-roll failed To Hit rolls against Monsters</description>
     </rule>
     <rule id="0034-5232-d561-d7c0" name="Fire And Advance" hidden="false">
-      <description>Draw the next Command Card. If that Command Card is for the active Character’s Regiment (i.e. the Regiment the Character is in), that Regiment Acts immediately. If the Stand’s Regiment uses a Volley Action as its second Action, it may take a third Action, which must be a March, after the Volley is resolved. Once the Regiment has completed its Actions, the Character then
-takes his or her Action. If the drawn Command Card is not the Character’s Regiment, place it on the bottom of your Command Stack. e Character then takes his or her Action.</description>
+      <description>Draw the next Command Card. If that Command Card is for the active Character’s Regiment (i.e. the Regiment the Character is in), that Regiment Acts immediately. If the Stand’s Regiment uses a Volley Action as its second Action, it may take a third Action, which must be a March, after the Volley is resolved. Once the Regiment has completed its Actions, the Character then takes his or her Action. If the drawn Command Card is not the Character’s Regiment, place it on the bottom of your Command Stack. e Character then takes his or her Action.</description>
     </rule>
     <rule id="c42e-7cc3-fbfd-57c5" name="Flank" hidden="false">
-      <description>A Regiment containing at least one
-Stand with this special rule can choose to
-automatically pass or fail its Reinforcement
-Rolls. When the Turn comes that the Regiment
-automatically passes Reinforcement Rolls,
-it cannot use this ability to further delay
-its entrance.</description>
+      <description>A Regiment containing at least one Stand with this special rule can choose to automatically pass or fail its Reinforcement Rolls. When the Turn comes that the Regiment automatically passes Reinforcement Rolls, it cannot use this ability to further delay its entrance.</description>
     </rule>
     <rule id="24b4-65d7-2928-17ea" name="Fluid Formation" hidden="false">
-      <description>A Regiment where all
-non-character Stands have this special rule
-can take an extra Reform Action. is Action
-must be used either rst or last. A Regiment
-with the Fluid Formation Special rule has 360
-degrees Line of Sight.</description>
+      <description>A Regiment where all non-character Stands have this special rule can take an extra Reform Action. is Action must be used either rst or last. A Regiment with the Fluid Formation Special rule has 360 degrees Line of Sight.</description>
     </rule>
     <rule id="68aa-6fdd-10d5-1009" name="Flurry" hidden="false">
-      <description>This Stand re-rolls all failed To Hit
-Rolls when performing a Clash Action.</description>
+      <description>This Stand re-rolls all failed To Hit Rolls when performing a Clash Action.</description>
     </rule>
     <rule id="af5c-d9d9-d339-d993" name="Flux-Powered" hidden="false">
-      <description>: All Stands in the Regiment with this Draw Event gain either +2 Clash or +2 Attacks until end of Turn (you choose).</description>
+      <description>All Stands in the Regiment with this Draw Event gain either +2 Clash or +2 Attacks until end of Turn (you choose).</description>
     </rule>
     <rule id="2ce6-43c4-74a5-6c11" name="Fly" hidden="false">
-      <description>A Regiment composed entirely of Stands
-with this special rule can March over other
-Regiments and Impassable Terrain. The
-Regiment cannot end its March on top of
-another Regiment or Impassable Terrain.</description>
+      <description>A Regiment composed entirely of Stands with this special rule can March over other Regiments and Impassable Terrain. The Regiment cannot end its March on top of another Regiment or Impassable Terrain.</description>
     </rule>
     <rule id="7490-85e0-12dd-950a" name="Forward Deployment" hidden="false">
       <description>A Regiment where all non-character Stands have this special rule may arrive as Reinforcements as normal. Alternatively, you may skip its Action Phase and place it occupying a single piece of Garrison Terrain on the Battleeld with high enough capacity.</description>
@@ -1254,8 +1169,7 @@ another Regiment or Impassable Terrain.</description>
       <description>When a Stand with this Special Rule is in contact with an enemy Regiment, that Regiment does not benet from the Shield and Bastion Special Rule.</description>
     </rule>
     <rule id="a7fc-bba8-cd22-0735" name="Overcharge" hidden="false">
-      <description>This Regiment may take a special ‘Overcharge’ Action in each of its Actions. If it does so, place an Overcharge marker beside the Regiment. When the Regiment makes a Volley Action, you may discard any number of Overcharge counters. Each counter discarded in this way increases the number of shots in the Volley by 2, and the Armor Piercing attribute by 1 for all shots in the Volley. Should the
-Regiment lack Armor Piercing, it gains up to Armor Piercing 1. </description>
+      <description>This Regiment may take a special ‘Overcharge’ Action in each of its Actions. If it does so, place an Overcharge marker beside the Regiment. When the Regiment makes a Volley Action, you may discard any number of Overcharge counters. Each counter discarded in this way increases the number of shots in the Volley by 2, and the Armor Piercing attribute by 1 for all shots in the Volley. Should the Regiment lack Armor Piercing, it gains up to Armor Piercing 1. </description>
     </rule>
     <rule id="c6a5-ef40-e08f-4d64" name="Parry" hidden="false">
       <description>Hit Rolls of ‘1’ made against a Stand with this special rule must be re-rolled. If all non-character stands in a Regiment have this
@@ -1278,12 +1192,7 @@ to its front.</description>
       <description>When this special rule is used, each Hit Roll of 1 in a Ranged Attack causes an additional Hit on the Target.</description>
     </rule>
     <rule id="471b-fe22-76f6-7a13" name="Rebellious" hidden="false">
-      <description>All Regiments containing at
-least one Stand with this Special Rule must be
-placed either at the top or at the bottom of the
-Command Stack. All Rebellious Regiments
-must be placed together. at restriction aside,
-you may place them in any order you wish.</description>
+      <description>All Regiments containing at least one Stand with this Special Rule must be placed either at the top or at the bottom of the Command Stack. All Rebellious Regiments must be placed together. at restriction aside, you may place them in any order you wish.</description>
     </rule>
     <rule id="2184-f72b-3e46-5004" name="Redress Rank" hidden="false">
       <description>Draw the next Command Card. If that Command Card is for the active Character’s Regiment (i.e. the Regiment the Character is in), that Regiment Acts immediately. If the Stand’s Regiment uses a Volley Action as its second Action, it may take a third Action, which must be a Reform after the Volley is resolved. Once the Regiment has completed its Actions, the Character then takes his or her Action. If the drawn Command Card is not the Character’s Regiment, place it on the bottom of your Command Stack. e Character then takes his or her Action.</description>
@@ -1372,9 +1281,6 @@ you may place them in any order you wish.</description>
       </characteristics>
     </profile>
     <profile id="f700-3e3a-6eef-7cee" name="Resist Decay" hidden="false" typeId="2575-c9f6-6e9e-1b0f" typeName="Special Rule">
-      <modifiers>
-        <modifier type="set" field="b5b0-a1ce-3507-1069" value="0.0"/>
-      </modifiers>
       <characteristics>
         <characteristic name="Modifer" typeId="b5b0-a1ce-3507-1069"/>
       </characteristics>
