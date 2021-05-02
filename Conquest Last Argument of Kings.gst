@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="dd30-0080-e51a-c53f" name="Conquest: Last Argument of Kings" revision="5" battleScribeVersion="2.03" authorName="Ragnarok494" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="dd30-0080-e51a-c53f" name="Conquest: Last Argument of Kings" revision="7" battleScribeVersion="2.03" authorName="Ragnarok494" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <publications>
     <publication id="aac0-c2ce-54be-2796" name="Rulebook v1.03" shortName="Rulbook" publisher="Para Bellum Wargames Ltd" publicationDate="June 24 2020" publisherUrl="https://www.para-bellum.com/wp-content/uploads/2020/06/Companion_Rules_v.103.pdf"/>
   </publications>
@@ -78,6 +78,11 @@
     <profileType id="2575-c9f6-6e9e-1b0f" name="Special Rule">
       <characteristicTypes>
         <characteristicType id="b5b0-a1ce-3507-1069" name="Modifer"/>
+      </characteristicTypes>
+    </profileType>
+    <profileType id="e289-60f3-b24d-6230" name="Regiment Upgrade">
+      <characteristicTypes>
+        <characteristicType id="4d2b-a729-e4dd-3c0d" name="Effect"/>
       </characteristicTypes>
     </profileType>
   </profileTypes>
@@ -331,7 +336,7 @@
     </forceEntry>
   </forceEntries>
   <sharedSelectionEntries>
-    <selectionEntry id="15af-31f9-039c-8f9a" name="Additonal Stands" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="15af-31f9-039c-8f9a" name="Additional Stands" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
         <modifier type="add" field="category" value="c4ce-252a-5f19-9bdb"/>
       </modifiers>
@@ -670,6 +675,259 @@
         <cost name="Mastery" typeId="3af1-4791-0a97-8053" value="1.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="deed-3bac-d6b5-e864" name="Combat Retinue: Tier 1" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="888d-4dac-90c1-beea" value="10.0">
+          <conditions>
+            <condition field="selections" scope="ancestor" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0bd0-c6e7-b2d6-0c48" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b648-7d7d-8b25-68cb" type="max"/>
+      </constraints>
+      <rules>
+        <rule id="7427-c0f6-d57b-0640" name="Combat Tier 1" hidden="false">
+          <description>The Character gains +1 Wound.</description>
+        </rule>
+      </rules>
+      <costs>
+        <cost name="Points" typeId="888d-4dac-90c1-beea" value="5.0"/>
+        <cost name="Retinue" typeId="92ff-18fb-e0e2-e189" value="1.0"/>
+        <cost name="Mastery" typeId="3af1-4791-0a97-8053" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="72ce-f06c-7c0c-523b" name="Combat Retinue: Tier 2" hidden="true" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="deed-3bac-d6b5-e864" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="888d-4dac-90c1-beea" value="20.0">
+          <conditions>
+            <condition field="selections" scope="ancestor" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0bd0-c6e7-b2d6-0c48" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6149-1cd3-c46d-b380" type="max"/>
+      </constraints>
+      <rules>
+        <rule id="b68d-0dbd-3f20-0975" name="Combat Tier 2" hidden="false">
+          <description>The Character gains +1 Clash.</description>
+        </rule>
+      </rules>
+      <costs>
+        <cost name="Points" typeId="888d-4dac-90c1-beea" value="10.0"/>
+        <cost name="Retinue" typeId="92ff-18fb-e0e2-e189" value="1.0"/>
+        <cost name="Mastery" typeId="3af1-4791-0a97-8053" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="6a2d-b6a7-c27e-b17f" name="Combat Retinue: Tier 3" hidden="true" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="888d-4dac-90c1-beea" value="50.0">
+          <conditions>
+            <condition field="selections" scope="ancestor" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0bd0-c6e7-b2d6-0c48" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <modifierGroups>
+        <modifierGroup>
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="72ce-f06c-7c0c-523b" type="equalTo"/>
+                    <condition field="selections" scope="ancestor" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="0bd0-c6e7-b2d6-0c48" type="notInstanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2d35-6318-22e3-1cce" type="max"/>
+      </constraints>
+      <rules>
+        <rule id="a4dd-9357-deec-061b" name="Combat Tier 3" hidden="false">
+          <description>The Character gains +1 Cleave and +1 Attack.</description>
+        </rule>
+      </rules>
+      <costs>
+        <cost name="Points" typeId="888d-4dac-90c1-beea" value="25.0"/>
+        <cost name="Retinue" typeId="92ff-18fb-e0e2-e189" value="1.0"/>
+        <cost name="Mastery" typeId="3af1-4791-0a97-8053" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="7c75-68ad-554d-a8ab" name="Magic Retinue: Tier 1" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="888d-4dac-90c1-beea" value="20.0">
+          <conditions>
+            <condition field="selections" scope="ancestor" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f559-32eb-61e7-0ab3" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ce5a-cb69-878e-f761" type="max"/>
+      </constraints>
+      <rules>
+        <rule id="7c22-54e8-7e32-70bb" name="Magic Tier 1" hidden="false">
+          <description>The Character gains the Blessed special rule and +1 Wizard/Priest Level. If the Character is not a Wizard/Priest, he counts as Wizard (1) for disruption purposes.</description>
+        </rule>
+      </rules>
+      <costs>
+        <cost name="Points" typeId="888d-4dac-90c1-beea" value="10.0"/>
+        <cost name="Retinue" typeId="92ff-18fb-e0e2-e189" value="1.0"/>
+        <cost name="Mastery" typeId="3af1-4791-0a97-8053" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="2419-b0be-0fd0-2fc0" name="Magic Retinue: Tier 2" hidden="true" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="7c75-68ad-554d-a8ab" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="888d-4dac-90c1-beea" value="40.0">
+          <conditions>
+            <condition field="selections" scope="ancestor" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f559-32eb-61e7-0ab3" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5604-1260-a2f9-864e" type="max"/>
+      </constraints>
+      <rules>
+        <rule id="b52b-5c98-d23d-7e3b" name="Magic Tier 2" hidden="false">
+          <description>When using a Spellcasting Action, the Character treats all regiments as having 3 fewer stands for scaling purposes.</description>
+        </rule>
+      </rules>
+      <costs>
+        <cost name="Points" typeId="888d-4dac-90c1-beea" value="20.0"/>
+        <cost name="Retinue" typeId="92ff-18fb-e0e2-e189" value="1.0"/>
+        <cost name="Mastery" typeId="3af1-4791-0a97-8053" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="e924-7583-5718-d555" name="Magic Retinue: Tier 3" hidden="true" collective="false" import="true" type="upgrade">
+      <modifierGroups>
+        <modifierGroup>
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2419-b0be-0fd0-2fc0" type="equalTo"/>
+                    <condition field="selections" scope="ancestor" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="f559-32eb-61e7-0ab3" type="notInstanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c323-1405-5d11-8e04" type="max"/>
+      </constraints>
+      <rules>
+        <rule id="e9f6-3ed4-c138-59b0" name="Magic Tier 3" hidden="false">
+          <description>The Character adds 1 success when using a Spellcasting Action.</description>
+        </rule>
+      </rules>
+      <costs>
+        <cost name="Points" typeId="888d-4dac-90c1-beea" value="30.0"/>
+        <cost name="Retinue" typeId="92ff-18fb-e0e2-e189" value="1.0"/>
+        <cost name="Mastery" typeId="3af1-4791-0a97-8053" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="d067-7638-75b0-966f" name="Tactical Retinue: Tier 1" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="888d-4dac-90c1-beea" value="10.0">
+          <conditions>
+            <condition field="selections" scope="ancestor" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c219-7875-8027-c887" type="instanceOf"/>
+          </conditions>
+        </modifier>
+        <modifier type="add" field="category" value="3d4c-3973-b325-1eea"/>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="40dd-03c6-efa8-5475" type="max"/>
+      </constraints>
+      <rules>
+        <rule id="ba15-8e33-3e69-69f7" name="Tactical Tier 1" hidden="false">
+          <description>The Character and any Regiment he has joined reroll one failed Resolve die per
+Character’s Tier in Tactics.</description>
+        </rule>
+      </rules>
+      <costs>
+        <cost name="Points" typeId="888d-4dac-90c1-beea" value="5.0"/>
+        <cost name="Retinue" typeId="92ff-18fb-e0e2-e189" value="1.0"/>
+        <cost name="Mastery" typeId="3af1-4791-0a97-8053" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="8b7b-e58e-dd9b-6b86" name="Tactical Retinue: Tier 2" hidden="true" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="d067-7638-75b0-966f" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="888d-4dac-90c1-beea" value="20.0">
+          <conditions>
+            <condition field="selections" scope="ancestor" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c219-7875-8027-c887" type="instanceOf"/>
+          </conditions>
+        </modifier>
+        <modifier type="add" field="category" value="f807-29fa-adad-b18d"/>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b11e-0db7-1ae0-e424" type="max"/>
+      </constraints>
+      <rules>
+        <rule id="feaf-1451-b864-30ed" name="Tactical Tier 2" hidden="false">
+          <description>The Character may purchase 1 different perk from the faction list (in addition to any they may already be able to gain)</description>
+        </rule>
+      </rules>
+      <costs>
+        <cost name="Points" typeId="888d-4dac-90c1-beea" value="10.0"/>
+        <cost name="Retinue" typeId="92ff-18fb-e0e2-e189" value="1.0"/>
+        <cost name="Mastery" typeId="3af1-4791-0a97-8053" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="1b8b-ec7d-7255-516e" name="Tactical Retinue: Tier 3" hidden="true" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="add" field="category" value="ee42-2ef9-dce2-b3d6"/>
+      </modifiers>
+      <modifierGroups>
+        <modifierGroup>
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8b7b-e58e-dd9b-6b86" type="equalTo"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c219-7875-8027-c887" type="notInstanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0f50-c05c-f60c-04bb" type="max"/>
+      </constraints>
+      <rules>
+        <rule id="d31a-3dff-554a-f579" name="Tactical Tier 3" hidden="false">
+          <description>The Character and any Regiment they have joined gain the Flank special rule.</description>
+        </rule>
+      </rules>
+      <costs>
+        <cost name="Points" typeId="888d-4dac-90c1-beea" value="35.0"/>
+        <cost name="Retinue" typeId="92ff-18fb-e0e2-e189" value="1.0"/>
+        <cost name="Mastery" typeId="3af1-4791-0a97-8053" value="0.0"/>
+      </costs>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup id="6e3b-8054-7127-c5ac" name="Warlord" hidden="false" collective="false" import="true">
@@ -731,7 +989,7 @@
             </modifier>
           </modifiers>
           <selectionEntries>
-            <selectionEntry id="3efe-ab9f-95df-f718" name="Tier 1" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="3efe-ab9f-95df-f718" name="Tactical Retinue: Tier 1" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
                 <modifier type="set" field="888d-4dac-90c1-beea" value="10.0">
                   <conditions>
@@ -755,7 +1013,7 @@ Character’s Tier in Tactics.</description>
                 <cost name="Mastery" typeId="3af1-4791-0a97-8053" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="81f2-f078-5824-2a47" name="Tier 2" hidden="true" collective="false" import="true" type="upgrade">
+            <selectionEntry id="81f2-f078-5824-2a47" name="Tactical Retinue: Tier 2" hidden="true" collective="false" import="true" type="upgrade">
               <modifiers>
                 <modifier type="set" field="hidden" value="false">
                   <conditions>
@@ -783,7 +1041,7 @@ Character’s Tier in Tactics.</description>
                 <cost name="Mastery" typeId="3af1-4791-0a97-8053" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="b110-ee81-e69a-9f7f" name="Tier 3" hidden="true" collective="false" import="true" type="upgrade">
+            <selectionEntry id="b110-ee81-e69a-9f7f" name="Tactical Retinue: Tier 3" hidden="true" collective="false" import="true" type="upgrade">
               <modifiers>
                 <modifier type="add" field="category" value="ee42-2ef9-dce2-b3d6"/>
               </modifiers>
@@ -832,7 +1090,7 @@ Character’s Tier in Tactics.</description>
             </modifier>
           </modifiers>
           <selectionEntries>
-            <selectionEntry id="8ec1-dcfb-625c-26b9" name="Tier 2" hidden="true" collective="false" import="true" type="upgrade">
+            <selectionEntry id="8ec1-dcfb-625c-26b9" name="Combat Retinue: Tier 2" hidden="true" collective="false" import="true" type="upgrade">
               <modifiers>
                 <modifier type="set" field="hidden" value="false">
                   <conditions>
@@ -859,7 +1117,7 @@ Character’s Tier in Tactics.</description>
                 <cost name="Mastery" typeId="3af1-4791-0a97-8053" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="c14f-9a3d-dda0-49b1" name="Tier 1" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="c14f-9a3d-dda0-49b1" name="Combat Retinue: Tier 1" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
                 <modifier type="set" field="888d-4dac-90c1-beea" value="10.0">
                   <conditions>
@@ -881,7 +1139,7 @@ Character’s Tier in Tactics.</description>
                 <cost name="Mastery" typeId="3af1-4791-0a97-8053" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="7cc5-3d49-ffe2-2b47" name="Tier 3" hidden="true" collective="false" import="true" type="upgrade">
+            <selectionEntry id="7cc5-3d49-ffe2-2b47" name="Combat Retinue: Tier 3" hidden="true" collective="false" import="true" type="upgrade">
               <modifiers>
                 <modifier type="set" field="888d-4dac-90c1-beea" value="50.0">
                   <conditions>
@@ -1012,7 +1270,7 @@ Character’s Tier in Tactics.</description>
             </modifier>
           </modifiers>
           <selectionEntries>
-            <selectionEntry id="5ab3-005c-6511-8be4" name="Tier 1" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="5ab3-005c-6511-8be4" name="Magic Retinue: Tier 1" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
                 <modifier type="set" field="888d-4dac-90c1-beea" value="20.0">
                   <conditions>
@@ -1034,7 +1292,7 @@ Character’s Tier in Tactics.</description>
                 <cost name="Mastery" typeId="3af1-4791-0a97-8053" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="788d-f1e2-cda4-be63" name="Tier 2" hidden="true" collective="false" import="true" type="upgrade">
+            <selectionEntry id="788d-f1e2-cda4-be63" name="Magic Retinue: Tier 2" hidden="true" collective="false" import="true" type="upgrade">
               <modifiers>
                 <modifier type="set" field="hidden" value="false">
                   <conditions>
@@ -1061,7 +1319,7 @@ Character’s Tier in Tactics.</description>
                 <cost name="Mastery" typeId="3af1-4791-0a97-8053" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="28b3-ac73-555a-d65e" name="Tier 3" hidden="true" collective="false" import="true" type="upgrade">
+            <selectionEntry id="28b3-ac73-555a-d65e" name="Magic Retinue: Tier 3" hidden="true" collective="false" import="true" type="upgrade">
               <modifierGroups>
                 <modifierGroup>
                   <modifiers>
@@ -1365,6 +1623,15 @@ you may place them in any order you wish.</description>
     </rule>
     <rule id="d1f5-15a2-8b2d-2e3a" name="Standard Bearer" hidden="false">
       <description>A Regiment with a Standard Bearer may re-roll failed Charges, and adds one to its March distance (not the March characteristic) on the second March Action it performs in one activation.</description>
+    </rule>
+    <rule id="5120-3247-0b00-5780" name="Priest" hidden="false">
+      <description>This Stand can use Spellcasting Actions. The ‘X’ shows the Stand’s Magic Level</description>
+    </rule>
+    <rule id="0930-2fa6-598d-8e84" name="Wizard" hidden="false">
+      <description>This Stand can use Spellcasting Actions. The ‘X’ shows the Stand’s Magic Level</description>
+    </rule>
+    <rule id="c9f4-a7f0-0788-187a" name="Fearsome" hidden="false">
+      <description>Enemy Regiments in contact with one or more Stands with this special rule making a Combat Rally Action must roll a dice and compare it to their Resolve characteristic. If the roll is equal to or less than their Resolve, the Combat Rally succeeds. If not, it fails, and the Regiment remains Broken.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
