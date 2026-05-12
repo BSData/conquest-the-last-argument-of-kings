@@ -60,6 +60,7 @@
     <categoryEntry id="5668-551e-24ee-0ded" name="Air" hidden="false"/>
     <categoryEntry id="1f2c-8214-11bc-a889" name="Fire" hidden="false"/>
     <categoryEntry id="29ac-0fa1-684b-dbc6" name="Water" hidden="false"/>
+    <categoryEntry id="03e7-068a-ba02-d3f8" name="Archangel" hidden="false"/>
   </categoryEntries>
   <selectionEntries>
     <selectionEntry id="9653-fa0a-7a4b-72b8" name="Chapter Mage" hidden="false" collective="false" import="true" type="model">
@@ -3611,7 +3612,7 @@
         <cost name="Mastery" typeId="3af1-4791-0a97-8053" value="0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry type="model" import="true" name="Archangel" hidden="false" id="80f0-8b4b-7e93-83f9" publicationId="4266-ce19-4e02-d103" page="" defaultAmount="1">
+    <selectionEntry type="model" import="true" name="Archangel" hidden="true" id="80f0-8b4b-7e93-83f9" publicationId="4266-ce19-4e02-d103" defaultAmount="">
       <costs>
         <cost name="Points" typeId="888d-4dac-90c1-beea" value="240"/>
         <cost name="Retinue" typeId="92ff-18fb-e0e2-e189" value="0"/>
@@ -3619,6 +3620,7 @@
       </costs>
       <categoryLinks>
         <categoryLink targetId="32a9-788d-2727-b320" id="1c4d-ebf5-a42f-be7a" primary="false" name="Regiment"/>
+        <categoryLink targetId="03e7-068a-ba02-d3f8" id="c5bf-5bf7-85df-edab" primary="false" name="Archangel"/>
       </categoryLinks>
       <profiles>
         <profile name="Archangel" typeId="3ac5-974b-5f8d-a72c" typeName="Regiment" hidden="false" id="1ddf-d98f-8090-01fd">
